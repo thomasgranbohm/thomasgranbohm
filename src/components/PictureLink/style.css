@@ -1,0 +1,18 @@
+.Logo {
+	margin-right: 1em;
+	width: 2em;
+	height: 2em;
+	filter: brightness(0);
+
+	transition: filter 0.2s;
+}
+
+.Logo:hover {
+	filter: brightness(1);
+}
+
+@media (prefers-color-scheme: dark) {
+	.Logo {
+		filter: brightness(0) invert(1);
+	}
+}
