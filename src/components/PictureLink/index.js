@@ -3,7 +3,7 @@ import "./style.css";
 
 function PictureLink(props) {
 	let { name, link } = props.info;
-	let avatarURL = `/images/${name.toLowerCase()}.svg`;
+	let avatarURL = `/profile/images/${name.toLowerCase()}.svg`;
 	return (
 		<a className="PictureLink" href={link}>
 			<img className="Logo" src={avatarURL} alt={name} />

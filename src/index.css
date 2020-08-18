@@ -31,7 +31,7 @@ body {
 
 @font-face {
 	font-family: Heebo;
-	src: url("/fonts/Heebo.ttf");
+	src: url("/profile/fonts/Heebo.ttf");
 }
 
 @media only screen and (max-width: 600px) {

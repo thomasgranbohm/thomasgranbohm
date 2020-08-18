@@ -5,7 +5,7 @@ function Profile(props) {
 	return (
 		<section className="Profile">
 			<img
-				src="/images/profile-picture.jpg"
+				src="/profile/images/profile-picture.jpg"
 				alt="Thomas Granbohm"
 				className="Picture"
 			/>
