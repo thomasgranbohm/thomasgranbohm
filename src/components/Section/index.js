@@ -1,13 +1,13 @@
 import React from "react";
 import "./style.css";
 
-function Section(props) {
+function Section({ title, children }) {
 	return (
 		<section className="Section">
 			<header>
-				<h2>{props.title}</h2>
+				<h2>{title}</h2>
 			</header>
-			{props.children}
+			{children}
 		</section>
 	);
 }

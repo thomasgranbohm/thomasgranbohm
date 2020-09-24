@@ -25,7 +25,7 @@ let links = objects
 	.sort((a, b) => a.name >= b.name)
 	.map((o, i) => <PictureLink info={o} key={i} />);
 
-function SocialMedias(props) {
+function SocialMedias() {
 	return <Section title="Social Media">{links}</Section>;
 }
 

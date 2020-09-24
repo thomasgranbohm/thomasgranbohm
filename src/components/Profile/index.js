@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Profile(props) {
+function Profile() {
 	return (
 		<section className="Profile">
 			<img

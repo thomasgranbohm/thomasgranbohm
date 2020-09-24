@@ -4,8 +4,8 @@ import Section from "../Section";
 
 let objects = [
 	{
-		name: "CuBot",
-		link: "https://github.com/thomasgranbohm/CuBot",
+		name: "Cubot",
+		link: "https://github.com/thomasgranbohm/Cubot",
 	},
 	{
 		name: "YomTube",
@@ -29,7 +29,7 @@ let links = objects
 		return toReturn;
 	});
 
-function Projects(props) {
+function Projects() {
 	return <Section title="Projects">{links}</Section>;
 }
 
