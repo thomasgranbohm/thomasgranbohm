@@ -1,7 +1,11 @@
-import React from "react";
+import * as React from "react";
 import "./style.css";
 
-function Section({ title, children }) {
+interface Props {
+	title: string;
+}
+
+export const Section: React.FC<Props> = ({ title, children }) => {
 	return (
 		<section className="Section">
 			<header>
@@ -11,5 +15,3 @@ function Section({ title, children }) {
 		</section>
 	);
 }
-
-export default Section;

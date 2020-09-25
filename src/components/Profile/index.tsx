@@ -1,7 +1,7 @@
-import React from "react";
+import * as React from "react";
 import "./style.css";
 
-function Profile() {
+export const Profile: React.FC = () => {
 	return (
 		<section className="Profile">
 			<img
@@ -15,6 +15,4 @@ function Profile() {
 			</a>
 		</section>
 	);
-}
-
-export default Profile;
+};

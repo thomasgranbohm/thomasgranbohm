@@ -1,14 +1,15 @@
-import React from "react";
+import * as React from "react";
+import { TypeLink } from "src/types";
 import "./style.css";
 
-function PictureLink(props) {
-	let { name, link } = props.info;
+export const PictureLink: React.FC<TypeLink> = ({
+	name,
+	link
+}) => {
 	let avatarURL = `/profile/images/${name.toLowerCase()}.svg`;
 	return (
 		<a className="PictureLink" href={link}>
 			<img className="Logo" src={avatarURL} alt={name} />
 		</a>
 	);
-}
-
-export default PictureLink;
+};
