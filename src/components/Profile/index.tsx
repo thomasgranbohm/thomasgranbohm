@@ -5,7 +5,7 @@ export const Profile: React.FC = () => {
 	return (
 		<section className="Profile">
 			<img
-				src="/profile/images/profile-picture.jpg"
+				src="/profile/images/profile-picture-alt.jpg"
 				alt="Thomas Granbohm"
 				className="Picture"
 			/>

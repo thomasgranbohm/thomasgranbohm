@@ -1,6 +1,3 @@
-# Profile Page
+# 👋 Thomas Granbohm
 
-This page was created for me to have a professional-looking profile page.  
-The page is hosted at https://granbohm.dev/profile  
-
-It was created with React.
+I am a full stack web developer at [Delorean](https://delorean.se) in Stockholm!

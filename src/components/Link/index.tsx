@@ -4,8 +4,10 @@ import "./style.css";
 
 export const Link: React.FC<TypeLink> = ({ name, link }) => {
 	return (
-		<a className="Link" href={link}>
-			{name}
-		</a>
+		<span>
+			<a className="Link" href={link}>
+				{name}
+			</a>
+		</span>
 	);
 };
