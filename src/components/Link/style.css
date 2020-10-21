@@ -6,6 +6,7 @@
 
 	transition: color 0.05s;
 	color: var(--link-color);
+	font-weight: 500;
 }
 
 .Interpunct {

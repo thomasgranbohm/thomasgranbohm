@@ -11,6 +11,16 @@
 	filter: brightness(1);
 }
 
+/* Yes this is a bad solution 👍 */
+.hidden-input {
+	overflow: "hidden";
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
 @media (prefers-color-scheme: dark) {
 	.Logo {
 		filter: brightness(0) invert(1);

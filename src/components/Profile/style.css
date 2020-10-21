@@ -22,9 +22,6 @@
 .Email {
 	grid-area: Email;
 	align-self: flex-start;
-}
-
-.Email {
 	color: var(--link-color);
 	text-decoration: none;
 }
