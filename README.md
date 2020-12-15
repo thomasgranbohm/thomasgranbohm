@@ -1,3 +1,3 @@
-# 👋 Thomas Granbohm
+# Thomas Granbohm 👋
 
-I am a full stack web developer at [Delorean](https://delorean.se) in Stockholm!
+I am a web developer working at [Delorean](https://delorean.se) in Stockholm!
