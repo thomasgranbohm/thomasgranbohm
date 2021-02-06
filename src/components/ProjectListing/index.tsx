@@ -1,8 +1,7 @@
 import * as React from "react";
 import classes from "./style.module.scss";
 import { Projects } from "src/info";
-import { Link } from "../Link";
-import { Section } from "../Section";
+import { Link, Section } from "src/components";
 
 const Interpunct = () => <span className={classes["interpunct"]}>•</span>;
 

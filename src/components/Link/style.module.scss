@@ -1,10 +1,11 @@
+@import "../../colors.module";
+
 .link {
-	color: var(--color);
 	text-decoration: none;
 
 	padding: 0.5em 0;
 
 	transition: color 0.05s;
-	color: var(--link-color);
+	color: $link-color;
 	font-weight: 500;
 }

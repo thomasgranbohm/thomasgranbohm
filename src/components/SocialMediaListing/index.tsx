@@ -1,17 +1,13 @@
 import * as React from "react";
 import { SocialMedias } from "src/info";
-import { PictureLink } from "../PictureLink";
-import { Section } from "../Section";
+import { PictureLink, Section } from "src/components";
 
-export const SocialMediaListing: React.FC = () => {
+export const SocialMediaListing = () => {
 	return (
 		<Section title="Social Media">
-			{
-				SocialMedias
-					.map((o, i) => {
-						return <PictureLink {...o} key={i} />;
-					})
-			}
+			{SocialMedias.map((o, i) => (
+				<PictureLink {...o} key={i} />
+			))}
 		</Section>
 	);
 };

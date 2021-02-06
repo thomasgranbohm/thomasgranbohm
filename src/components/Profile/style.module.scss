@@ -1,3 +1,5 @@
+@import "../../colors.module";
+
 .profile {
 	display: grid;
 
@@ -22,6 +24,6 @@
 .email {
 	grid-area: email;
 	align-self: flex-start;
-	color: var(--link-color);
+	color: $link-color;
 	text-decoration: none;
 }
