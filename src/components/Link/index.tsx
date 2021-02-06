@@ -1,13 +1,11 @@
 import * as React from "react";
 import { TypeLink } from "src/types";
-import "./style.css";
+import classes from "./style.module.scss";
 
-export const Link: React.FC<TypeLink> = ({ name, link }) => {
-	return (
-		<span>
-			<a className="Link" href={link}>
-				{name}
-			</a>
-		</span>
-	);
-};
+export const Link = ({ name, link }: TypeLink) => (
+	<span>
+		<a className={classes["link"]} href={link}>
+			{name}
+		</a>
+	</span>
+);

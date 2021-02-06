@@ -1,13 +1,15 @@
-.Logo {
+.logo {
 	margin-right: 1em;
 	width: 2em;
 	height: 2em;
 	filter: brightness(0);
 
 	transition: filter 0.2s;
+
+	cursor: pointer;
 }
 
-.Logo:hover {
+.logo:hover {
 	filter: brightness(1);
 }
 
@@ -22,7 +24,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	.Logo {
+	.logo {
 		filter: brightness(0) invert(1);
 	}
 }

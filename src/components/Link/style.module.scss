@@ -1,4 +1,4 @@
-.Link {
+.link {
 	color: var(--color);
 	text-decoration: none;
 
@@ -7,9 +7,4 @@
 	transition: color 0.05s;
 	color: var(--link-color);
 	font-weight: 500;
-}
-
-.Interpunct {
-	margin: 0 0.75em;
-	user-select: none;
 }

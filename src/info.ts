@@ -30,12 +30,11 @@ export const SocialMedias: Array<TypeLink> = [
 	},
 	{
 		name: "Spotify",
-		link:
-			"https://open.spotify.com/user/familjengranbohm",
+		link: "https://open.spotify.com/user/familjengranbohm",
 	},
 	{
 		name: "Discord",
 		link: "tommy ▄▀#7029",
-		type: "copy"
-	}
+		type: "copy",
+	},
 ].sort((a, b) => a.name.localeCompare(b.name));

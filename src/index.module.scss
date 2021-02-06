@@ -21,6 +21,13 @@ body {
 	color: var(--color);
 }
 
+.app {
+	width: 100%;
+	max-width: 210mm;
+	margin: 0 auto;
+	padding: 0.5em;
+}
+
 @media (prefers-color-scheme: dark) {
 	:root {
 		--background-color: #282828;

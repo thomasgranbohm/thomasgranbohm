@@ -1,26 +1,26 @@
-.Profile {
+.profile {
 	display: grid;
 
 	grid-template-columns: 8em 1fr;
 	grid-template-rows: repeat(2, 4em);
-	grid-template-areas: "Picture Name" "Picture Email";
+	grid-template-areas: "picture name" "picture email";
 	grid-gap: 0.5em;
 }
 
-.Picture {
-	grid-area: Picture;
+.picture {
+	grid-area: picture;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
 
-.Name {
-	grid-area: Name;
+.name {
+	grid-area: name;
 	align-self: flex-end;
 }
 
-.Email {
-	grid-area: Email;
+.email {
+	grid-area: email;
 	align-self: flex-start;
 	color: var(--link-color);
 	text-decoration: none;
