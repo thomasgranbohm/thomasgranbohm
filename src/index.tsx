@@ -4,31 +4,18 @@ import {
 	About,
 	Profile,
 	ProjectListing,
-	Section,
 	SocialMediaListing,
+	ToolsListing,
 } from "./components";
-import { Icon } from "./components/Icon";
-import classes from "./index.module.scss";
-import { Tools } from "./info";
-import { TypeIcon } from "./types";
+import "./index.scss";
 
-export const App = () => (
-	<main className={classes["app"]}>
+ReactDOM.render(
+	<React.StrictMode>
 		<Profile />
 		<About />
 		<ProjectListing />
 		<SocialMediaListing />
-		<Section title="Tools">
-			{Tools.map(({ name }: TypeIcon) => (
-				<Icon iconName={name} />
-			))}
-		</Section>
-	</main>
-);
-
-ReactDOM.render(
-	<React.StrictMode>
-		<App />
+		<ToolsListing />
 	</React.StrictMode>,
 	document.getElementById("root")
 );

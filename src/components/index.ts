@@ -7,6 +7,7 @@ import { Profile } from "./Profile/";
 import { ProjectListing } from "./ProjectListing/";
 import { Section } from "./Section/";
 import { SocialMediaListing } from "./SocialMediaListing/";
+import { ToolsListing } from "./ToolsListing/";
 
 export {
 	About,
@@ -18,4 +19,5 @@ export {
 	ProjectListing,
 	Section,
 	SocialMediaListing,
+	ToolsListing,
 };

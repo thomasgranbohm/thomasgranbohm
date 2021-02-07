@@ -7,14 +7,18 @@
 	margin-inline-end: 1em;
 
 	cursor: pointer;
+
+	transition: transform 0.2s;
+	path {
+		fill: gray;
+
+		transition: fill 0.2s;
+	}
 }
 
-.icon > path {
-	fill: gray;
-
-	transition: fill 0.2s;
-}
-
-.icon:hover > path {
-	fill: var(--hover-color, $color);
+.icon:hover {
+	transform: scale(1.1);
+	path {
+		fill: var(--hover-color, $color);
+	}
 }
