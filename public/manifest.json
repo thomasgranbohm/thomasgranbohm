@@ -3,7 +3,7 @@
 	"name": "Profile Page for Thomas Granbohm",
 	"icons": [
 		{
-			"src": "/profile/images/profile-picture.jpg",
+			"src": "/images/profile-picture.jpg",
 			"type": "image/png",
 			"sizes": "512x512"
 		}

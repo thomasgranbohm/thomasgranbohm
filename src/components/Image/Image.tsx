@@ -8,7 +8,7 @@ type ImageProps = {
 	ImgHTMLAttributes<HTMLImageElement>;
 
 export const Image = ({ name, alt, type, className, ...props }: ImageProps) => {
-	const avatarURL = `/profile/images/${name.toLowerCase()}.${type}`;
+	const avatarURL = `/images/${name.toLowerCase()}.${type}`;
 	return (
 		<img
 			src={avatarURL}

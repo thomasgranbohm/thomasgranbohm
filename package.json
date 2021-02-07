@@ -2,7 +2,7 @@
 	"name": "profile-page",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "/profile",
+	"homepage": "/",
 	"dependencies": {
 		"node-sass": "4.14.1",
 		"react": "^16.13.1",
