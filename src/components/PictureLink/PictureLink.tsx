@@ -1,6 +1,6 @@
 import * as React from "react";
 import { TypeLink } from "src/types";
-import classes from "./style.module.scss";
+import classes from "./PictureLink.module.scss";
 
 const copyToClipboard = (info: HTMLInputElement | null) => {
 	if (!info) return;

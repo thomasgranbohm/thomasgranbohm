@@ -1,5 +1,5 @@
 import * as React from "react";
-import classes from "./style.module.scss";
+import classes from "./ProjectListing.module.scss";
 import { Projects } from "src/info";
 import { Link, Section } from "src/components";
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import classes from "./style.module.scss";
+import classes from "./Section.module.scss";
 
 interface Props {
 	title: string;

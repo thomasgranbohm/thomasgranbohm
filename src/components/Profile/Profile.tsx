@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Link } from "..";
-import classes from "./style.module.scss";
+import { Link } from "src/components";
+import classes from "./Profile.module.scss";
 
 export const Profile = () => (
 	<section className={classes["profile"]}>

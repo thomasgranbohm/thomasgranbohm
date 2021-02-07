@@ -1,6 +1,6 @@
 import * as React from "react";
 import { OptionalParams, TypeLink } from "src/types";
-import classes from "./style.module.scss";
+import classes from "./Link.module.scss";
 
 export const Link = ({
 	name,
