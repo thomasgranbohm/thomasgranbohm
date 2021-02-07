@@ -8,4 +8,8 @@
 	transition: color 0.05s;
 	color: $link-color;
 	font-weight: 500;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }

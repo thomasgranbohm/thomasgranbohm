@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "..";
 import classes from "./style.module.scss";
 
 export const Profile = () => (
@@ -9,8 +10,9 @@ export const Profile = () => (
 			className={classes["picture"]}
 		/>
 		<h1 className={classes["name"]}>Thomas Granbohm</h1>
-		<a className={classes["email"]} href="mailto:thomas.granbohm@gmail.com">
-			thomas.granbohm@gmail.com
-		</a>
+		<Link
+			name="thomas.granbohm@gmail.com"
+			link="mailto:thomas.granbohm@gmail.com"
+		/>
 	</section>
 );

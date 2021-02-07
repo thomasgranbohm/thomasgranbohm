@@ -7,12 +7,12 @@ import { ProjectListing } from "./components/ProjectListing";
 import { SocialMediaListing } from "./components/SocialMediaListing";
 
 export const App = () => (
-	<div className={classes["app"]}>
+	<main className={classes["app"]}>
 		<Profile />
 		<About />
 		<ProjectListing />
 		<SocialMediaListing />
-	</div>
+	</main>
 );
 
 ReactDOM.render(

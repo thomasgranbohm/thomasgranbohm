@@ -13,6 +13,10 @@ export const Projects: Array<TypeLink> = [
 		name: "Music Player",
 		link: "https://github.com/thomasgranbohm/music-player",
 	},
+	{
+		name: "Landsort Booking System",
+		link: "https://github.com/thomasgranbohm/landsort-booking-system",
+	},
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export const SocialMedias: Array<TypeLink> = [

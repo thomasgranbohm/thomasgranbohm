@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+
+	&::selection {
+		background-color: $color;
+		color: $background-color;
+	}
 }
 
 body {
@@ -12,7 +17,7 @@ body {
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow: hidden;
+	// overflow: hidden;
 	background-color: $background-color;
 	color: $color;
 }
@@ -21,7 +26,16 @@ body {
 	width: 100%;
 	max-width: 210mm;
 	margin: 0 auto;
-	padding: 0.5em;
+	padding: 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0.5em 0;
 }
 
 @font-face {
@@ -49,12 +63,12 @@ body {
 
 @media only screen and (min-width: 992px) {
 	body {
-		font-size: 1.4em;
+		// font-size: 1.4em;
 	}
 }
 
 @media only screen and (min-width: 1200px) {
 	body {
-		font-size: 1.6em;
+		// font-size: 1.6em;
 	}
 }
