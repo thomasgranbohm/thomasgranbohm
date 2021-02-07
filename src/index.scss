@@ -39,15 +39,9 @@ h6 {
 	src: url("/fonts/Heebo.ttf");
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 768px) {
 	body {
-		font-size: 0.8em;
-	}
-}
-
-@media only screen and (min-width: 600px) {
-	body {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 }
 

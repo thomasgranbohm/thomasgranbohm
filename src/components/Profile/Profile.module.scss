@@ -3,10 +3,13 @@
 .profile {
 	display: grid;
 
-	grid-template-columns: 8em 1fr;
-	grid-template-rows: repeat(2, 4em);
+	grid-template-columns: 6rem 1fr;
 	grid-template-areas: "picture name" "picture email";
 	grid-gap: 0.5em;
+
+	@media only screen and (min-width: 600px) {
+		grid-template-columns: 8em 1fr;
+	}
 }
 
 .picture {
