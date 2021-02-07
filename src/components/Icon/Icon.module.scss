@@ -1,0 +1,20 @@
+@import "../../colors.module";
+
+.icon {
+	width: 2em;
+	height: 2em;
+
+	margin-inline-end: 1em;
+
+	cursor: pointer;
+}
+
+.icon > path {
+	fill: gray;
+
+	transition: fill 0.2s;
+}
+
+.icon:hover > path {
+	fill: var(--hover-color, $color);
+}

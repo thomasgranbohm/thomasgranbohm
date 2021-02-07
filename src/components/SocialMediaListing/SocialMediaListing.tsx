@@ -4,8 +4,10 @@ import { PictureLink, Section } from "src/components";
 
 export const SocialMediaListing = () => (
 	<Section title="Social Media">
-		{SocialMedias.map((o, i) => (
-			<PictureLink {...o} key={i} />
-		))}
+		{SocialMedias.sort((a, b) => a.name.localeCompare(b.name)).map(
+			(o, i) => (
+				<PictureLink {...o} key={i} />
+			)
+		)}
 	</Section>
 );

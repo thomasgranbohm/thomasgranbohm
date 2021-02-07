@@ -1,6 +1,6 @@
 import * as React from "react";
-import { TypeLink } from "src/types";
-import { Image } from "..";
+import { TypeIcon, TypeLink } from "src/types";
+import { Icon } from "../Icon";
 import classes from "./PictureLink.module.scss";
 
 const copyToClipboard = (info: HTMLInputElement | null) => {
@@ -10,7 +10,7 @@ const copyToClipboard = (info: HTMLInputElement | null) => {
 	alert(`Copied ${info.value} to the clipboard!`);
 };
 
-export const PictureLink = ({ name, link, type }: TypeLink) => {
+export const PictureLink = ({ name, link, type }: TypeLink & TypeIcon) => {
 	const toCopy = React.useRef<HTMLInputElement>(null);
 	if (type === "copy") {
 		return (
@@ -23,10 +23,8 @@ export const PictureLink = ({ name, link, type }: TypeLink) => {
 					ref={toCopy}
 					readOnly
 				/>
-				<Image
-					type="svg"
-					className={classes["logo"]}
-					name={name}
+				<Icon
+					iconName={name}
 					onClick={() => copyToClipboard(toCopy.current)}
 				/>
 			</>
@@ -39,7 +37,7 @@ export const PictureLink = ({ name, link, type }: TypeLink) => {
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<Image type="svg" className={classes["logo"]} name={name} />
+			<Icon className={classes["logo"]} iconName={name} />
 		</a>
 	);
 };

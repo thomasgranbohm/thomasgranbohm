@@ -9,6 +9,6 @@ export const About = () => (
 		frameworks and libraries.
 		<br />
 		<br />I am a full stack web developer at{" "}
-		<Link name="Delorean" link="https://www.delorean.se/" /> in Stockholm!
+		<Link link="https://www.delorean.se/">Delorean</Link> in Stockholm!
 	</Section>
 );

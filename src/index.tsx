@@ -2,15 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {
 	About,
-	Image,
 	Profile,
 	ProjectListing,
 	Section,
 	SocialMediaListing,
 } from "./components";
+import { Icon } from "./components/Icon";
 import classes from "./index.module.scss";
 import { Tools } from "./info";
-import { TypeImage } from "./types";
+import { TypeIcon } from "./types";
 
 export const App = () => (
 	<main className={classes["app"]}>
@@ -19,8 +19,8 @@ export const App = () => (
 		<ProjectListing />
 		<SocialMediaListing />
 		<Section title="Tools">
-			{Tools.map(({ name }: TypeImage) => (
-				<Image name={name} type="svg" />
+			{Tools.map(({ name }: TypeIcon) => (
+				<Icon iconName={name} />
 			))}
 		</Section>
 	</main>

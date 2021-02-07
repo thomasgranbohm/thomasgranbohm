@@ -11,10 +11,8 @@ export const Profile = () => (
 			className={classes["picture"]}
 		/>
 		<h1 className={classes["name"]}>Thomas Granbohm</h1>
-		<Link
-			name="thomas.granbohm@gmail.com"
-			link="mailto:thomas.granbohm@gmail.com"
-			prefix="📧"
-		/>
+		<Link link="mailto:thomas.granbohm@gmail.com" prefix="📧">
+			thomas.granbohm@gmail.com
+		</Link>
 	</section>
 );

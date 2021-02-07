@@ -1,9 +1,14 @@
 import { HTMLAttributes } from "react";
+import { IconNames } from "./icons";
+
+export interface TypeIcon {
+	name: IconNames;
+}
 
 export interface TypeImage {
 	name: string;
 }
-export interface TypeLink extends TypeImage {
+export interface TypeLink {
 	link: string;
 	type?: string;
 }

@@ -1,6 +1,6 @@
-import { TypeImage, TypeLink } from "./types";
+import { TypeImage, TypeIcon, TypeLink } from "./types";
 
-export const Projects: Array<TypeLink> = [
+export const Projects: Array<TypeLink & TypeImage> = [
 	{
 		name: "Cubot",
 		link: "https://github.com/thomasgranbohm/Cubot",
@@ -19,50 +19,50 @@ export const Projects: Array<TypeLink> = [
 	},
 ].sort((a, b) => a.name.localeCompare(b.name));
 
-export const SocialMedias: Array<TypeLink> = [
+export const SocialMedias: Array<TypeIcon & TypeLink> = [
 	{
-		name: "GitHub",
+		name: "github",
 		link: "https://github.com/thomasgranbohm",
 	},
 	{
-		name: "LinkedIn",
+		name: "linkedin",
 		link: "https://www.linkedin.com/in/thomas-granbohm/",
 	},
 	{
-		name: "Instagram",
-		link: "https://instagram.com/tokxhu",
+		name: "instagram",
+		link: "https://instagram.com/thomasgranbohm",
 	},
 	{
-		name: "Spotify",
+		name: "spotify",
 		link: "https://open.spotify.com/user/familjengranbohm",
 	},
 	{
-		name: "Discord",
+		name: "discord",
 		link: "tommy ▄▀#7029",
 		type: "copy",
 	},
-].sort((a, b) => a.name.localeCompare(b.name));
+];
 
-export const Tools: TypeImage[] = [
+export const Tools: TypeIcon[] = [
 	{
-		name: "Git",
+		name: "git",
 	},
 	{
-		name: "Java",
+		name: "java",
 	},
 	{
-		name: "JavaScript",
+		name: "javascript",
 	},
 	{
-		name: "Laravel",
+		name: "laravel",
 	},
 	{
-		name: "Node.js",
+		name: "node.js",
 	},
 	{
-		name: "Svelte",
+		name: "svelte",
 	},
 	{
-		name: "TypeScript",
+		name: "typescript",
 	},
 ];

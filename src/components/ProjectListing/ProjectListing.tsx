@@ -8,7 +8,9 @@ export const ProjectListing = () => (
 		<ul>
 			{Projects.map<React.ReactNode>(({ name, link }, i) => (
 				<li className={classes["list-item"]}>
-					<Link link={link} name={name} key={i} />
+					<Link link={link} key={i}>
+						{name}
+					</Link>
 				</li>
 			))}
 		</ul>
