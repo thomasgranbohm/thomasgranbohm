@@ -1,0 +1,23 @@
+.image {
+	margin-right: 1em;
+	width: 2em;
+	height: 2em;
+}
+
+.svg {
+	filter: grayscale(100%);
+
+	transition: filter 0.2s;
+
+	cursor: pointer;
+}
+
+.svg:hover {
+	filter: grayscale(0%);
+}
+
+@media (prefers-color-scheme: dark) {
+	.svg {
+		filter: grayscale(100%) invert(1);
+	}
+}

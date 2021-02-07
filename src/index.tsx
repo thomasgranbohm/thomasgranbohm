@@ -1,10 +1,16 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+	About,
+	Image,
+	Profile,
+	ProjectListing,
+	Section,
+	SocialMediaListing,
+} from "./components";
 import classes from "./index.module.scss";
-import { About } from "./components/About/About";
-import { Profile } from "./components/Profile";
-import { ProjectListing } from "./components/ProjectListing/ProjectListing";
-import { SocialMediaListing } from "./components/SocialMediaListing/SocialMediaListing";
+import { Tools } from "./info";
+import { TypeImage } from "./types";
 
 export const App = () => (
 	<main className={classes["app"]}>
@@ -12,6 +18,11 @@ export const App = () => (
 		<About />
 		<ProjectListing />
 		<SocialMediaListing />
+		<Section title="Tools">
+			{Tools.map(({ name }: TypeImage) => (
+				<Image name={name} type="svg" />
+			))}
+		</Section>
 	</main>
 );
 

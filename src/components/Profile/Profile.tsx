@@ -1,18 +1,20 @@
 import * as React from "react";
-import { Link } from "src/components";
+import { Image, Link } from "src/components";
 import classes from "./Profile.module.scss";
 
 export const Profile = () => (
 	<section className={classes["profile"]}>
-		<img
-			src="/profile/images/profile-picture-alt.jpg"
+		<Image
+			name="profile-picture-alt"
 			alt="Thomas Granbohm"
+			type="jpg"
 			className={classes["picture"]}
 		/>
 		<h1 className={classes["name"]}>Thomas Granbohm</h1>
 		<Link
 			name="thomas.granbohm@gmail.com"
 			link="mailto:thomas.granbohm@gmail.com"
+			prefix="📧"
 		/>
 	</section>
 );

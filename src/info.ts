@@ -1,4 +1,4 @@
-import { TypeLink } from "./types";
+import { TypeImage, TypeLink } from "./types";
 
 export const Projects: Array<TypeLink> = [
 	{
@@ -42,3 +42,27 @@ export const SocialMedias: Array<TypeLink> = [
 		type: "copy",
 	},
 ].sort((a, b) => a.name.localeCompare(b.name));
+
+export const Tools: TypeImage[] = [
+	{
+		name: "Git",
+	},
+	{
+		name: "Java",
+	},
+	{
+		name: "JavaScript",
+	},
+	{
+		name: "Laravel",
+	},
+	{
+		name: "Node.js",
+	},
+	{
+		name: "Svelte",
+	},
+	{
+		name: "TypeScript",
+	},
+];

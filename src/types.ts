@@ -1,7 +1,9 @@
-import { HTMLProps } from "react";
+import { HTMLAttributes } from "react";
 
-export interface TypeLink {
+export interface TypeImage {
 	name: string;
+}
+export interface TypeLink extends TypeImage {
 	link: string;
 	type?: string;
 }
@@ -11,4 +13,4 @@ export interface Classname {
 }
 
 export type OptionalParams<PropType, ElementType> = PropType &
-	HTMLProps<ElementType>;
+	HTMLAttributes<ElementType>;

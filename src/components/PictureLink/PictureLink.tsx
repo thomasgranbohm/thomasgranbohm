@@ -1,5 +1,6 @@
 import * as React from "react";
 import { TypeLink } from "src/types";
+import { Image } from "..";
 import classes from "./PictureLink.module.scss";
 
 const copyToClipboard = (info: HTMLInputElement | null) => {
@@ -10,7 +11,6 @@ const copyToClipboard = (info: HTMLInputElement | null) => {
 };
 
 export const PictureLink = ({ name, link, type }: TypeLink) => {
-	const avatarURL = `/profile/images/${name.toLowerCase()}.svg`;
 	const toCopy = React.useRef<HTMLInputElement>(null);
 	if (type === "copy") {
 		return (
@@ -23,10 +23,10 @@ export const PictureLink = ({ name, link, type }: TypeLink) => {
 					ref={toCopy}
 					readOnly
 				/>
-				<img
+				<Image
+					type="svg"
 					className={classes["logo"]}
-					src={avatarURL}
-					alt={name}
+					name={name}
 					onClick={() => copyToClipboard(toCopy.current)}
 				/>
 			</>
@@ -39,7 +39,7 @@ export const PictureLink = ({ name, link, type }: TypeLink) => {
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<img className={classes["logo"]} src={avatarURL} alt={name} />
+			<Image type="svg" className={classes["logo"]} name={name} />
 		</a>
 	);
 };

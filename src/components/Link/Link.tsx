@@ -2,12 +2,19 @@ import * as React from "react";
 import { OptionalParams, TypeLink } from "src/types";
 import classes from "./Link.module.scss";
 
+type LinkProps = {
+	prefix?: string;
+} & TypeLink;
+
 export const Link = ({
 	name,
 	link,
-}: OptionalParams<TypeLink, HTMLAnchorElement>) => (
+	prefix,
+	...props
+}: OptionalParams<LinkProps, HTMLAnchorElement>) => (
 	<span>
-		<a className={classes["link"]} href={link}>
+		{prefix && `${prefix} `}
+		<a {...props} className={classes["link"]} href={link}>
 			{name}
 		</a>
 	</span>
