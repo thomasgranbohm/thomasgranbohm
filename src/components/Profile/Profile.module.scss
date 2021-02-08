@@ -4,7 +4,8 @@
 	display: grid;
 
 	grid-template-columns: 6rem 1fr;
-	grid-template-areas: "picture name" "picture email";
+	grid-template-rows: 2fr 1fr 1fr;
+	grid-template-areas: "picture name" "picture email" "picture phonenumber";
 	grid-gap: 0.5em;
 
 	@media only screen and (min-width: 600px) {
@@ -15,7 +16,7 @@
 .picture {
 	grid-area: picture;
 	width: 100%;
-	height: 100%;
+
 	object-fit: cover;
 }
 

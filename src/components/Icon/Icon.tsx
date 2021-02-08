@@ -13,7 +13,12 @@ export const Icon = ({ iconName, className, ...props }: IconProps) => {
 	useEffect(() => {
 		if (ref && ref.current && icon && icon.fillColor) {
 			const { fillColor } = icon;
-			ref.current.style.setProperty("--hover-color", `#${fillColor}`);
+			const rgb = fillColor
+				.match(/.{1,2}/g)
+				?.map((hexPair) => parseInt(hexPair, 16)) || [0, 0, 0];
+			if (rgb.reduce((a, b) => a + b, 0) / rgb.length > 30) {
+				ref.current.style.setProperty("--hover-color", `#${fillColor}`);
+			}
 		}
 	}, [icon]);
 

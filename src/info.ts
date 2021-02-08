@@ -1,3 +1,4 @@
+import { IconNames } from "./icons";
 import { TypeImage, TypeIcon, TypeLink } from "./types";
 
 export const Projects: Array<TypeLink & TypeImage> = [
@@ -43,26 +44,20 @@ export const SocialMedias: Array<TypeIcon & TypeLink> = [
 	},
 ];
 
-export const Tools: TypeIcon[] = [
-	{
-		name: "git",
-	},
-	{
-		name: "java",
-	},
-	{
-		name: "javascript",
-	},
-	{
-		name: "laravel",
-	},
-	{
-		name: "node.js",
-	},
-	{
-		name: "svelte",
-	},
-	{
-		name: "typescript",
-	},
+export const Tools: IconNames[] = [
+	"css3",
+	"docker",
+	"git",
+	"html5",
+	"java",
+	"javascript",
+	"laravel",
+	"mongodb",
+	"next.js",
+	"node.js",
+	"php",
+	"postgresql",
+	"react",
+	"svelte",
+	"typescript",
 ];

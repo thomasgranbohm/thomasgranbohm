@@ -4,7 +4,7 @@ import { Tools } from "src/info";
 
 export const ToolsListing = () => (
 	<Section title="Tools">
-		{Tools.map(({ name }, i) => (
+		{Tools.sort((a, b) => a.localeCompare(b)).map((name, i) => (
 			<Icon iconName={name} key={i} />
 		))}
 	</Section>
