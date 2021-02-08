@@ -2,6 +2,7 @@ import { About } from "./About/";
 import { Link } from "./Link/";
 import { Icon } from "./Icon/";
 import { Image } from "./Image";
+import { Listing } from "./Listing/";
 import { PictureLink } from "./PictureLink/";
 import { Profile } from "./Profile/";
 import { ProjectListing } from "./ProjectListing/";
@@ -14,6 +15,7 @@ export {
 	Link,
 	Icon,
 	Image,
+	Listing,
 	PictureLink,
 	Profile,
 	ProjectListing,

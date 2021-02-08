@@ -4,8 +4,8 @@
 	display: grid;
 
 	grid-template-columns: 6rem 1fr;
-	grid-template-rows: 2fr 1fr 1fr;
-	grid-template-areas: "picture name" "picture email" "picture phonenumber";
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-areas: "picture name" "picture name" "picture email" "picture phonenumber";
 	grid-gap: 0.5em;
 
 	@media only screen and (min-width: 600px) {
@@ -18,6 +18,7 @@
 	width: 100%;
 
 	object-fit: cover;
+	align-self: center;
 }
 
 .name {
