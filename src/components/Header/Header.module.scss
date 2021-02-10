@@ -27,7 +27,4 @@ $size: 8rem;
 	margin: 0;
 
 	align-self: center;
-	@media #{$tablet-small} {
-		align-self: flex-end;
-	}
 }
