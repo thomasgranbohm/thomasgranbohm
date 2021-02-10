@@ -1,0 +1,9 @@
+@import "../../styles/colors.scss";
+
+.contact-info {
+	color: $text;
+
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}

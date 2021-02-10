@@ -1,21 +1,8 @@
 import { HTMLAttributes } from "react";
-import { IconNames } from "./icons";
 
-export interface TypeIcon {
-	name: IconNames;
-}
+export type HTMLProps<T> = HTMLAttributes<T>;
 
-export interface TypeImage {
-	name: string;
+export interface TContactInfo {
+	email: string;
+	phonenumber: string;
 }
-export interface TypeLink {
-	link: string;
-	type?: string;
-}
-
-export interface Classname {
-	classname?: string;
-}
-
-export type OptionalParams<PropType, ElementType> = PropType &
-	HTMLAttributes<ElementType>;

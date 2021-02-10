@@ -1,6 +1,7 @@
 @import "../../styles/colors.scss";
 
-.image {
+.unordered-list {
 	color: $text;
-	background-color: $background;
+
+	margin-inline-start: 2rem;
 }

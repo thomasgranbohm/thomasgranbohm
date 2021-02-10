@@ -1,0 +1,36 @@
+@import "../../styles/colors.scss";
+
+.anchor {
+	color: $link;
+
+	text-decoration: none;
+
+	font-weight: 600;
+
+	transition: color 0.1s;
+
+	&:hover {
+		color: $text;
+	}
+
+	font-style: normal;
+
+	text-decoration: underline;
+
+	.prefix {
+		margin-inline-end: 0.5rem;
+	}
+
+	&::before {
+		text-decoration: none;
+		display: inline-block;
+		margin-inline-end: 0.5rem;
+	}
+
+	&[href^="mailto"]::before {
+		content: "📧";
+	}
+	&[href^="tel"]::before {
+		content: "📞";
+	}
+}

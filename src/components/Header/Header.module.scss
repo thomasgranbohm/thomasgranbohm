@@ -1,0 +1,33 @@
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
+
+$size: 8rem;
+
+.header {
+	color: $text;
+
+	display: grid;
+	gap: 0 0.5em;
+	grid-template-columns: 1fr $size;
+	grid-template-areas: "title image";
+}
+
+.image {
+	grid-area: image;
+
+	width: $size;
+	height: $size;
+
+	align-self: center;
+}
+
+.title {
+	grid-area: title;
+
+	margin: 0;
+
+	align-self: center;
+	@media #{$tablet-small} {
+		align-self: flex-end;
+	}
+}

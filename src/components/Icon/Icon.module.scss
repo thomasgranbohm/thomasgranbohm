@@ -1,26 +1,18 @@
-@import "../../colors.module";
+@import "../../styles/colors.scss";
+@import "../../styles/variables.scss";
 
 .icon {
-	width: 2em;
-	height: 2em;
+	color: $text;
+
+	height: 3rem;
+	width: 3rem;
 
 	cursor: pointer;
+	transition: fill 0.2s;
 
-	transition: transform 0.2s;
-	@media only screen and (max-width: 600px) {
-		path {
-			fill: var(--hover-color, $color);
+	@media #{$tablet-small} {
+		&:not(:hover) {
+			fill: $secondary;
 		}
 	}
-	@media only screen and (min-width: 600px) {
-		path {
-			fill: gray;
-
-			transition: fill 0.2s;
-		}
-	}
-}
-
-.icon:hover path {
-	fill: var(--hover-color, $color);
 }

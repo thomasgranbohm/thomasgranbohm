@@ -1,0 +1,45 @@
+@import "./variables.scss";
+@import "./colors.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	color: $text;
+	background-color: $background;
+
+	font-family: Heebo;
+}
+
+::selection {
+	color: $background;
+	background-color: $text;
+}
+
+#root {
+	width: 100%;
+	max-width: 210mm;
+
+	margin: 0 auto;
+	padding: 1em;
+
+	font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0.5em 0;
+}
+
+@font-face {
+	font-family: Heebo;
+	src: url("/fonts/Heebo.ttf");
+}
