@@ -3,13 +3,13 @@
 	"name": "Profile Page for Thomas Granbohm",
 	"icons": [
 		{
-			"src": "/images/profile-picture.jpg",
+			"src": "/images/profile-picture-alt.jpg",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
 	],
 	"start_url": ".",
 	"display": "standalone",
-	"theme_color": "#000000",
+	"theme_color": "#000000",	
 	"background_color": "#ffffff"
 }
