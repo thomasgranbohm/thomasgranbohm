@@ -1,5 +1,4 @@
-@import "./variables.scss";
-@import "./colors.scss";
+@import "includes";
 
 * {
 	margin: 0;
@@ -12,6 +11,11 @@ body {
 	color: $text;
 	background-color: $background;
 
+	@media (prefers-color-scheme: dark) {
+		color: $background;
+		background-color: $text;
+	}
+
 	font-family: Heebo;
 }
 
@@ -20,7 +24,7 @@ body {
 	background-color: $text;
 }
 
-#root {
+main {
 	width: 100%;
 	max-width: 210mm;
 

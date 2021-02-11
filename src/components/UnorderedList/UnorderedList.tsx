@@ -1,5 +1,5 @@
 import React, { Children, HTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import classes from "./UnorderedList.module.scss";
 
 export type UnorderedListProps = {

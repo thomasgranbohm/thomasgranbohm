@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import { Heading } from "../Heading";
 import { Image } from "../Image";
 import classes from "./Header.module.scss";

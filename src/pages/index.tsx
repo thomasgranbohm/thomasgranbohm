@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Anchor } from "./components/Anchor";
-import { ContactInfo } from "./components/ContactInfo";
-import { Header } from "./components/Header";
-import { IconLink } from "./components/IconLink";
-import { IconList } from "./components/IconList";
-import { Paragraph } from "./components/Paragraph";
-import { Section } from "./components/Section";
-import { UnorderedList } from "./components/UnorderedList";
-import { ContactInformation, Projects, SocialMedias, Skills } from "./info";
-import "./styles/global.scss";
+import { Anchor } from "../components/Anchor";
+import { ContactInfo } from "../components/ContactInfo";
+import { Header } from "../components/Header";
+import { IconLink } from "../components/IconLink";
+import { IconList } from "../components/IconList";
+import { Paragraph } from "../components/Paragraph";
+import { Section } from "../components/Section";
+import { UnorderedList } from "../components/UnorderedList";
+import { ContactInformation, Projects, SocialMedias, Skills } from "../info";
 
 const App = () => {
 	return (
-		<main>
+		<main id="main">
 			<Header title="Thomas Granbohm" {...ContactInformation} />
 			<Section title="About me">
 				<Paragraph>
@@ -62,9 +61,4 @@ const App = () => {
 	);
 };
 
-ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById("root")
-);
+export default App;

@@ -1,5 +1,5 @@
 import React, { AnchorHTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import classes from "./Anchor.module.scss";
 
 export type AnchorProps = {

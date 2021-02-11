@@ -1,8 +1,6 @@
-@import "../../styles/colors.scss";
+@import "includes";
 
 .contact-info {
-	color: $text;
-
 	display: inline-flex;
 	flex-direction: column;
 	justify-content: space-evenly;

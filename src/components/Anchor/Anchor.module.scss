@@ -1,4 +1,4 @@
-@import "../../styles/colors.scss";
+@import "includes";
 
 .anchor {
 	color: $link;
@@ -8,10 +8,6 @@
 	font-weight: 600;
 
 	transition: color 0.1s;
-
-	&:hover {
-		color: $text;
-	}
 
 	font-style: normal;
 

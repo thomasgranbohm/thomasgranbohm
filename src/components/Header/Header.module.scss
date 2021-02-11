@@ -1,11 +1,8 @@
-@import "../../styles/colors.scss";
-@import "../../styles/variables.scss";
+@import "includes";
 
 $size: 8rem;
 
 .header {
-	color: $text;
-
 	display: grid;
 	gap: 0 0.5em;
 	grid-template-columns: 1fr $size;

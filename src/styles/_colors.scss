@@ -1,0 +1,16 @@
+$dark: #141414;
+$light: #fff;
+$gray: #808080;
+$blue: #0080ff;
+
+$background: #{$light};
+$text: #{$dark};
+$secondary: #{$gray};
+$link: #{$blue};
+
+:global {
+	@media (prefers-color-scheme: dark) {
+		$background: #{$dark};
+		$text: #{$light};
+	}
+}

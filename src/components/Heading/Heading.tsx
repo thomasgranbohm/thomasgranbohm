@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import classes from "./Heading.module.scss";
 
 export type HeadingTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

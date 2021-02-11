@@ -1,5 +1,5 @@
 import React, { ImgHTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import classes from "./Image.module.scss";
 
 type ImageProps = {

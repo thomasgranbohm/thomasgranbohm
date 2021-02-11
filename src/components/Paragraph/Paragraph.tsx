@@ -1,5 +1,5 @@
 import React, { HTMLAttributes } from "react";
-import concatClasses from "src/functions/concatClasses";
+import concatClasses from "../../functions/concatClasses";
 import classes from "./Paragraph.module.scss";
 
 export type ParagraphProps = HTMLAttributes<HTMLElement>;
