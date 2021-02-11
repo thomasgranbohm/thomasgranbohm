@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
 import { Heading, HeadingTypes } from "../../components/Heading";
-import classes from "./Test.module.css";
+import classes from "./Section.module.scss";
 
 type SectionProps = {
 	title: string;

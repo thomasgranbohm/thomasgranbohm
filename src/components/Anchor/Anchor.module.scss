@@ -17,10 +17,16 @@
 		margin-inline-end: 0.5rem;
 	}
 
+	&::selection {
+		color: $text;
+		background-color: $link;
+	}
+
 	&::before {
 		text-decoration: none;
 		display: inline-block;
 		margin-inline-end: 0.5rem;
+		font-family: "Emoji";
 	}
 
 	&[href^="mailto"]::before {

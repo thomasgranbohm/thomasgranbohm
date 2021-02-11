@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
 import { Heading } from "../Heading";
@@ -13,6 +14,9 @@ export const Header = ({ className, title }: HeaderProps): JSX.Element => {
 		<header
 			className={concatClasses(classes["header"], [className, className])}
 		>
+			<Head>
+				<title>Thomas Granbohm</title>
+			</Head>
 			<Image
 				alt={title}
 				className={classes["image"]}

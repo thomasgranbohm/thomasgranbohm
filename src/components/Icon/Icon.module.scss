@@ -7,10 +7,12 @@
 	cursor: pointer;
 	transition: fill 0.2s;
 
+	&:not([fill]),
+	&:hover:not([fill]) {
+		fill: $text;
+	}
+
 	@media (min-width: #{$tablet-small}) {
-		&:hover:not([fill]) {
-			fill: $text;
-		}
 		&:not(:hover) {
 			fill: $secondary;
 		}
