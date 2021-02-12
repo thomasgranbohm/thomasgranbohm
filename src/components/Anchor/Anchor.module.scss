@@ -24,13 +24,17 @@
 		text-decoration: none;
 		display: inline-block;
 		margin-inline-end: 0.5rem;
-		font-family: "Emoji";
+		// font-family: "Emoji";
+		// height: 100%;
+		// width: auto;
 	}
 
 	&[href^="mailto"]::before {
 		content: "📧";
+		// content: url("/images/emojis/e-mail.png");
 	}
 	&[href^="tel"]::before {
 		content: "📞";
+		// content: url("/images/emojis/telephone-receiver.png");
 	}
 }

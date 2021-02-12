@@ -79,4 +79,7 @@ export const Skills: IconNames[] = [
 	"react",
 	"svelte",
 	"typescript",
+	"sass",
+	"graphql",
+	"mysql",
 ];

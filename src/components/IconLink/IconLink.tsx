@@ -1,7 +1,6 @@
 import React, { HTMLAttributes } from "react";
 import { Anchor, AnchorProps } from "../Anchor";
 import { Icon, IconProps } from "../Icon";
-import classes from "./IconLink.module.scss";
 
 export type IconLinkProps = AnchorProps &
 	IconProps &
@@ -14,7 +13,7 @@ export const IconLink = ({
 	...props
 }: IconLinkProps) => {
 	return (
-		<Anchor className={classes["icon-link"]} href={href} {...props}>
+		<Anchor href={href} {...props}>
 			<Icon name={name} />
 		</Anchor>
 	);

@@ -11,7 +11,7 @@ body {
 	color: $text;
 	background-color: $background;
 
-	font-family: Heebo;
+	font-family: Heebo, sans-serif;
 }
 
 ::selection {
@@ -23,8 +23,8 @@ main {
 	width: 100%;
 	max-width: 210mm;
 
-	margin: 0 auto;
-	padding: 1em;
+	margin: 1em auto;
+	padding: 0 1em;
 
 	font-size: 18px;
 }
@@ -41,9 +41,5 @@ h6 {
 @font-face {
 	font-family: Heebo;
 	src: url("/fonts/Heebo.ttf");
-}
-
-@font-face {
-	font-family: Emoji;
-	src: url("/fonts/EmojiOne.ttf");
+	font-display: swap;
 }
