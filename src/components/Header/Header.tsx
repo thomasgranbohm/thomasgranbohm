@@ -15,6 +15,15 @@ export const Header = ({ className, title }: HeaderProps): JSX.Element => {
 			className={concatClasses(classes["header"], [className, className])}
 		>
 			<Head>
+				<meta charSet="UTF-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
+				<meta name="description" content="Personal webpage"/>
+
+				<meta property="og:title" content="Thomas Granbohm"/>
+				<meta property="og:url" content="https://thomas.granbohm.dev"/>
 				<title>Thomas Granbohm</title>
 			</Head>
 			<Image

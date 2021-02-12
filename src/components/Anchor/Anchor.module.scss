@@ -1,17 +1,15 @@
 @import "includes";
 
 .anchor {
+	display: inline-block;
+
 	color: $link;
-
 	text-decoration: none;
-
 	font-weight: 600;
+	font-style: normal;
+	text-decoration: underline;
 
 	transition: color 0.1s;
-
-	font-style: normal;
-
-	text-decoration: underline;
 
 	.prefix {
 		margin-inline-end: 0.5rem;
