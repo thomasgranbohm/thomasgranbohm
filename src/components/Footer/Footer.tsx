@@ -10,7 +10,7 @@ export const Footer = ({ className, ...props }: FooterProps) => {
 			className={concatClasses(classes["footer"], className)}
 			{...props}
 		>
-			<p>Built using Next.js – 2021</p>
+			<p>Built using Next.js — 2021</p>
 		</footer>
 	);
 };

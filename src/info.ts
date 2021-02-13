@@ -11,6 +11,7 @@ type IconLink = {
 } & AnchorProps;
 
 export const ContactInformation: TContactInfo = {
+	discord: "tommy ▄▀#7029",
 	email: "thomas.granbohm@gmail.com",
 	phonenumber: "+46 73-676 16 14",
 };
@@ -35,16 +36,6 @@ export const Projects: ProjectLink[] = [
 ];
 
 export const SocialMedias: IconLink[] = [
-	{
-		name: "discord",
-		href: "#",
-		onClick: () => {
-			navigator.clipboard.writeText("tommy ▄▀#7029").catch((err) => {
-				alert("Could not copy to clipboard!");
-				console.error(err);
-			});
-		},
-	},
 	{
 		name: "github",
 		href: "https://github.com/thomasgranbohm",

@@ -12,9 +12,5 @@ export const IconLink = ({
 	name,
 	...props
 }: IconLinkProps) => {
-	return (
-		<Anchor href={href} {...props}>
-			<Icon name={name} />
-		</Anchor>
-	);
+	return <Icon name={name} tabIndex={0} />;
 };

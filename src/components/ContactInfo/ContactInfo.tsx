@@ -8,6 +8,7 @@ export type ContactInfoProps = TContactInfo & HTMLAttributes<HTMLElement>;
 
 export const ContactInfo = ({
 	className,
+	discord,
 	email,
 	phonenumber,
 }: ContactInfoProps) => {
@@ -18,8 +19,16 @@ export const ContactInfo = ({
 				[className, className]
 			)}
 		>
-			<Anchor href={`mailto:${email}`}>{email}</Anchor>
-			<Anchor href={`tel:${phonenumber.split(/[\s,-]+/g).join("")}`}>
+			<Anchor href="#" noLink type="discord">
+				{discord}
+			</Anchor>
+			<Anchor href={`mailto:${email}`} type="email">
+				{email}
+			</Anchor>
+			<Anchor
+				href={`tel:${phonenumber.split(/[\s,-]+/g).join("")}`}
+				type="phone"
+			>
 				{phonenumber}
 			</Anchor>
 		</address>
