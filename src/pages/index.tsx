@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import { Anchor } from "../components/Anchor";
 import { ContactInfo } from "../components/ContactInfo";
@@ -13,6 +14,21 @@ import { ContactInformation, Projects, Skills, SocialMedias } from "../info";
 const App = () => {
 	return (
 		<main>
+			<Head>
+				<meta charSet="UTF-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0"
+				/>
+				<meta name="description" content="Personal webpage" />
+
+				<meta property="og:title" content="Thomas Granbohm" />
+				<meta property="og:url" content="https://thomas.granbohm.dev" />
+
+				<title>Thomas Granbohm</title>
+
+				<link rel="manifest" href="/manifest.json" />
+			</Head>
 			<Header title="Thomas Granbohm" {...ContactInformation} />
 			<article>
 				<Section title="About me">
