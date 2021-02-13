@@ -7,42 +7,12 @@
 	color: $link;
 	font-weight: 600;
 	font-style: normal;
-	text-decoration: none;
+	text-decoration: underline;
 
 	transition: color 0.1s;
-
-	&.noLink {
-		color: $text;
-		.link-text {
-			text-decoration: none;
-		}
-	}
-
-	.link-text {
-		text-decoration: underline;
-	}
 
 	&::selection {
 		color: $text;
 		background-color: $link;
-	}
-
-	&::before {
-		display: inline-block;
-		width: 27px;
-		height: 27px;
-
-		text-decoration: none;
-		text-align: center;
-	}
-
-	&.discord::before {
-		content: url("/images/discord.svg");
-	}
-	&[href^="mailto"]::before {
-		content: "📧";
-	}
-	&[href^="tel"]::before {
-		content: "📞";
 	}
 }

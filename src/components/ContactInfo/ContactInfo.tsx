@@ -2,6 +2,7 @@ import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
 import { TContactInfo } from "../../types";
 import { Anchor } from "../Anchor";
+import { ChildWithPrefix } from "../ChildWithPrefix";
 import classes from "./ContactInfo.module.scss";
 
 export type ContactInfoProps = TContactInfo & HTMLAttributes<HTMLElement>;
@@ -19,18 +20,15 @@ export const ContactInfo = ({
 				[className, className]
 			)}
 		>
-			<Anchor href="#" noLink type="discord">
-				{discord}
-			</Anchor>
-			<Anchor href={`mailto:${email}`} type="email">
-				{email}
-			</Anchor>
-			<Anchor
-				href={`tel:${phonenumber.split(/[\s,-]+/g).join("")}`}
-				type="phone"
-			>
-				{phonenumber}
-			</Anchor>
+			<ChildWithPrefix prefix="discord">{discord}</ChildWithPrefix>
+			<ChildWithPrefix prefix="email">
+				<Anchor href={`mailto:${email}`}>{email}</Anchor>
+			</ChildWithPrefix>
+			<ChildWithPrefix prefix="phone">
+				<Anchor href={`tel:${phonenumber.split(/[\s,-]+/g).join("")}`}>
+					{phonenumber}
+				</Anchor>
+			</ChildWithPrefix>
 		</address>
 	);
 };

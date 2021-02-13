@@ -1,0 +1,28 @@
+@import "includes.scss";
+
+.child-with-prefix {
+	display: inline-flex;
+	gap: 0.5em;
+
+	color: $text;
+
+	&::before {
+		display: inline-block;
+		width: 27px;
+		height: 27px;
+
+		font-style: normal;
+
+		text-align: center;
+	}
+
+	&.discord::before {
+		content: url("/images/discord.svg");
+	}
+	&.email::before {
+		content: "📧";
+	}
+	&.phone::before {
+		content: "📞";
+	}
+}
