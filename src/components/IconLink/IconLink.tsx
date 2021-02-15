@@ -19,9 +19,8 @@ export const IconLink = ({
 			href={href}
 			onFocus={() => setFocus(true)}
 			onBlur={() => setFocus(false)}
-			noUnderline
 		>
-			<Icon name={name} {...props} focus={focus} />
+			<Icon name={name} focus={focus} {...props} />
 		</Anchor>
 	);
 };

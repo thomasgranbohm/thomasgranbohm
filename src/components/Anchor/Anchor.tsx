@@ -4,18 +4,25 @@ import classes from "./Anchor.module.scss";
 
 export type AnchorProps = {
 	href: string;
+	noUnderline?: boolean;
 } & AnchorHTMLAttributes<HTMLElement>;
 
 export const Anchor: React.FC<AnchorProps> = ({
-	className,
 	children,
+	className,
 	href,
+	noUnderline,
 	...props
-}) => {
+}: AnchorProps) => {
 	return (
 		<a
-			className={concatClasses(classes["anchor"], [className, className])}
+			className={concatClasses(
+				classes["anchor"],
+				[className, className],
+				[classes["underline"], !noUnderline]
+			)}
 			href={href}
+			rel="noopener noreferrer"
 			target="_blank"
 			{...props}
 		>
