@@ -31,7 +31,7 @@ self.addEventListener("fetch", (e) => {
 						caches.open(CACHE_NAME)
 							.then((cache) => cache.put(e.request, respToCache))
 
-						return cache;
+						return resp;
 					})
 			})
 	)

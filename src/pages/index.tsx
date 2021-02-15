@@ -20,7 +20,7 @@ const App = () => {
 					(reg) => console.log('ServiceWorker registration successful with scope:', reg.scope),
 					(err) => console.log('ServiceWorker registration failed:', err)
 				);
-		} 
+		}
 	}, [])
 
 	return (
@@ -36,6 +36,15 @@ const App = () => {
 				<title>Thomas Granbohm</title>
 
 				<link rel="manifest" href="/manifest.json" />
+
+				<link rel="icon" type="image/png" href="/images/icon-x48.png" sizes="48x48" />
+				<link rel="icon" type="image/png" href="/images/icon-x96.png" sizes="96x96" />
+				<link rel="icon" type="image/png" href="/images/icon-x192.png" sizes="192x192" />
+				<link rel="apple-touch-icon" href="/images/icon-x192.png" sizes="192x192" />
+
+				<meta name="theme-color" content="#141414" />
+
+				<meta name="msapplication-config" content="/browserconfig.xml" />
 			</Head>
 			<Header title="Thomas Granbohm" {...ContactInformation} />
 			<article>

@@ -3,9 +3,46 @@
 	"name": "Profile Page for Thomas Granbohm",
 	"icons": [
 		{
-			"src": "/images/profile-picture@384px.webp",
-			"type": "image/webp",
-			"sizes": "384x384"
+			"src": "/images/icon-x48.png",
+			"type": "image/png",
+			"sizes": "48x48",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x72.png",
+			"type": "image/png",
+			"sizes": "72x72",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x96.png",
+			"type": "image/png",
+			"sizes": "96x96",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x128.png",
+			"type": "image/png",
+			"sizes": "128x128",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x192.png",
+			"type": "image/png",
+			"sizes": "192x192",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x384.png",
+			"type": "image/png",
+			"sizes": "384x384",
+			"purpose": "maskable"
+		},
+		{
+			"src": "/images/icon-x512.png",
+			"type": "image/png",
+			"sizes": "512x512",
+			"purpose": "maskable"
 		}
 	],
 	"start_url": ".",
