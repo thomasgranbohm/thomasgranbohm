@@ -4,6 +4,7 @@ import { Anchor } from "../components/Anchor";
 import { ContactInfo } from "../components/ContactInfo";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
+import { Icon } from "../components/Icon";
 import { IconLink } from "../components/IconLink";
 import { IconList } from "../components/IconList";
 import { Paragraph } from "../components/Paragraph";
@@ -67,7 +68,9 @@ const App = () => {
 						{SocialMedias.sort((a, b) =>
 							a.name.localeCompare(b.name)
 						).map(({ href, name }) => (
-							<IconLink href={href} name={name} key={name} />
+							<Anchor href={href}>
+								<Icon name={name} key={name} />
+							</Anchor>
 						))}
 					</IconList>
 				</Section>
@@ -75,7 +78,7 @@ const App = () => {
 					<IconList>
 						{Skills.sort((a, b) => a.localeCompare(b)).map(
 							(name) => (
-								<IconLink href="#" name={name} key={name} />
+								<Icon tabIndex={0} name={name} key={name} />
 							)
 						)}
 					</IconList>

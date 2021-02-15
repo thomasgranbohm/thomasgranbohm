@@ -16,6 +16,7 @@ export const Anchor: React.FC<AnchorProps> = ({
 		<a
 			className={concatClasses(classes["anchor"], [className, className])}
 			href={href}
+			target="_blank"
 			{...props}
 		>
 			<span className={classes["link-text"]}>{children}</span>

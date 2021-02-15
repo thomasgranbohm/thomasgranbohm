@@ -20,7 +20,9 @@ export const ContactInfo = ({
 				[className, className]
 			)}
 		>
-			<ChildWithPrefix prefix="discord">{discord}</ChildWithPrefix>
+			<ChildWithPrefix prefix="discord">
+				<p tabIndex={0}>{discord}</p>
+			</ChildWithPrefix>
 			<ChildWithPrefix prefix="email">
 				<Anchor href={`mailto:${email}`}>{email}</Anchor>
 			</ChildWithPrefix>
