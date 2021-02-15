@@ -12,15 +12,11 @@ export const IconLink = ({
 	name,
 	...props
 }: IconLinkProps) => {
-	const [focus, setFocus] = useState<boolean>(false);
+	const focusState = useState<boolean>(false);
 
 	return (
-		<Anchor
-			href={href}
-			onFocus={() => setFocus(true)}
-			onBlur={() => setFocus(false)}
-		>
-			<Icon name={name} focus={focus} {...props} />
+		<Anchor href={href} focusState={focusState} noUnderline>
+			<Icon name={name} focus={focusState[0]} {...props} />
 		</Anchor>
 	);
 };

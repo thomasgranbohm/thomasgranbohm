@@ -18,10 +18,9 @@
 
 	&.underline::after {
 		display: block;
+		content: "";
 
 		background-color: $link;
-
-		content: "";
 
 		height: 2px;
 		width: 100%;
@@ -31,10 +30,11 @@
 
 	@media (min-width: #{$tablet-small}) {
 		&.underline::after {
-			width: 0%;
+			width: 0px;
 		}
 
-		&.underline:hover::after {
+		&.underline:hover::after,
+		&.underline.focus::after {
 			width: 100%;
 		}
 	}
