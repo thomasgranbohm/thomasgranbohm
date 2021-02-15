@@ -4,16 +4,16 @@
 	height: 3rem;
 	width: 3rem;
 
-	cursor: pointer;
 	transition: fill 0.2s;
 
 	&:not([fill]),
+	&.focus:not([fill]),
 	&:hover:not([fill]) {
 		fill: $text;
 	}
 
 	@media (min-width: #{$tablet-small}) {
-		&:not(:hover) {
+		&:not(:hover, :focus, .focus) {
 			fill: $secondary;
 		}
 	}

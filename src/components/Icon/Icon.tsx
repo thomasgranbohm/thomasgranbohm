@@ -5,17 +5,25 @@ import { IconNames, Icons } from "./IconContent";
 
 export type IconProps = {
 	name: IconNames;
+	focus?: boolean;
 } & HTMLAttributes<SVGElement>;
 
-export const Icon: React.FC<IconProps> = ({ className, name, ...props }) => {
+export const Icon: React.FC<IconProps> = ({
+	className,
+	focus,
+	name,
+	...props
+}) => {
 	const { content, fillColor } = Icons[name];
-	const ref = useRef<SVGSVGElement>(null);
 
 	return (
 		<svg
-			className={concatClasses(classes["icon"], [className, className])}
+			className={concatClasses(
+				classes["icon"],
+				[className, className],
+				[classes["focus"], focus]
+			)}
 			fill={fillColor && `#${fillColor}`}
-			ref={ref}
 			viewBox="0 0 24 24"
 			{...props}
 		>
