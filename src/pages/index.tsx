@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { Anchor } from "../components/Anchor";
 import { ContactInfo } from "../components/ContactInfo";
 import { Footer } from "../components/Footer";
@@ -13,6 +13,16 @@ import { UnorderedList } from "../components/UnorderedList";
 import { ContactInformation, Projects, Skills, SocialMedias } from "../info";
 
 const App = () => {
+	useEffect(() => {
+		if ("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("/sw.js")
+				.then(
+					(reg) => console.log('ServiceWorker registration successful with scope:', reg.scope),
+					(err) => console.log('ServiceWorker registration failed:', err)
+				);
+		} 
+	}, [])
+
 	return (
 		<main>
 			<Head>
