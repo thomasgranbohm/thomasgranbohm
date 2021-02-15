@@ -2,7 +2,7 @@ const CACHE_NAME = "thomasgranbohm-v1";
 const toCache = [
 	"/",
 	"/fonts/Heebo.ttf",
-	"/images/profile-picture@384px.webp",
+	"/images/icon-x512.png"
 ]
 
 self.addEventListener("install", (e) => {

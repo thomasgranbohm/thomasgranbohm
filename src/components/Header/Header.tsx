@@ -16,9 +16,9 @@ export const Header = ({ className, title }: HeaderProps): JSX.Element => {
 			<Image
 				alt={title}
 				className={classes["image"]}
-				height={128}
-				src="/images/profile-picture@384px.webp"
-				width={128}
+				src="/images/icon-x512.png"
+				srcSet="/images/icon-x384.png 400w, /images/icon-x512.png 600w"
+				sizes="(max-width: 600px) 400w, 600w"
 			/>
 			<Heading type="h1" className={classes["title"]}>
 				{title}

@@ -26,25 +26,7 @@ const App = () => {
 	return (
 		<main>
 			<Head>
-				<meta charSet="UTF-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Personal webpage" />
-
-				<meta property="og:title" content="Thomas Granbohm" />
-				<meta property="og:url" content="https://thomas.granbohm.dev" />
-
 				<title>Thomas Granbohm</title>
-
-				<link rel="manifest" href="/manifest.json" />
-
-				<link rel="icon" type="image/png" href="/images/icon-x48.png" sizes="48x48" />
-				<link rel="icon" type="image/png" href="/images/icon-x96.png" sizes="96x96" />
-				<link rel="icon" type="image/png" href="/images/icon-x192.png" sizes="192x192" />
-				<link rel="apple-touch-icon" href="/images/icon-x192.png" sizes="192x192" />
-
-				<meta name="theme-color" content="#141414" />
-
-				<meta name="msapplication-config" content="/browserconfig.xml" />
 			</Head>
 			<Header title="Thomas Granbohm" {...ContactInformation} />
 			<article>
