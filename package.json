@@ -1,11 +1,12 @@
 {
-	"name": "rework-thomasgranbohm",
-	"version": "0.1.0",
+	"name": "thomasgranbohm",
+	"version": "0.2.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"prod": "next export || (next build && next export)"
 	},
 	"dependencies": {
 		"next": "10.0.6",
