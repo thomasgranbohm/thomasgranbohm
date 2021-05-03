@@ -73,4 +73,6 @@ export const Skills: IconNames[] = [
 	"sass",
 	"graphql",
 	"mysql",
+	"wordpress",
+	"strapi"
 ];
