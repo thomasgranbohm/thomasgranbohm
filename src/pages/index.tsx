@@ -14,7 +14,7 @@ import { ContactInformation, Projects, Skills, SocialMedias } from "../info";
 
 const App = () => {
 	useEffect(() => {
-		if ("serviceWorker" in navigator) {
+		if ("serviceWorker" in navigator && process.env.NODE_ENV !== "development") {
 			navigator.serviceWorker.register("/sw.js")
 				.then(
 					(reg) => console.log('ServiceWorker registration successful with scope:', reg.scope),

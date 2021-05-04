@@ -24,18 +24,20 @@
 
 		height: 2px;
 		width: 100%;
-
-		transition: width 0.2s cubic-bezier(0.85, 0, 0.15, 1);
 	}
 
 	@media (min-width: #{$tablet-small}) {
 		&.underline::after {
-			width: 0px;
+			width: 0%;
+			margin-inline-start: 100%;
+			transition: width 0.2s, margin-inline-start 0.2s;
 		}
 
 		&.underline:hover::after,
 		&.underline.focus::after {
 			width: 100%;
+			margin-inline-start: 0%;
+			transition: width 0.2s, margin-inline-start 0s;
 		}
 	}
 }
