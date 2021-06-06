@@ -1,27 +1,51 @@
 @import "includes";
 
-.icon-list {
-	margin-block-start: 0.5em;
-	&:not(.scroll) {
-		gap: 1rem;
-	}
-	@media (max-width: #{$tablet-small}) {
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		overflow-x: hidden;
-
-		margin: 0 -1rem;
-		padding: 0 1rem;
-	}
-
-	@media (min-width: #{$tablet-small}) {
+@mixin container-grid {
+	.container {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
 		grid-auto-rows: 3rem;
 
 		margin: unset;
 		padding: unset;
+
 		overflow: hidden;
+	}
+}
+
+.icon-list {
+	margin-block-start: 0.5em;
+
+	.container {
+		gap: $gutter;
+	}
+  
+	&.scroll {
+		@media (max-width: #{$tablet-small}) {
+			overflow-x: hidden;
+
+			margin: 0 (-1 * $gutter);
+
+			.container {
+				width: 100%;
+
+				padding: 0 $gutter $gutter;
+
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				flex-wrap: nowrap;
+
+				overflow: auto;
+			}
+		}
+	}
+
+	&:not(.scroll) {
+		@include container-grid();
+	}
+
+	@media (min-width: #{$tablet-small}) {
+		@include container-grid();
 	}
 }

@@ -23,8 +23,8 @@ main {
 	width: 100%;
 	max-width: 210mm;
 
-	margin: 1em auto;
-	padding: 0 1em;
+	margin: $gutter auto;
+	padding: 0 $gutter;
 
 	font-size: 18px;
 }
@@ -40,15 +40,6 @@ h6 {
 
 section {
 	margin-bottom: 1rem;
-}
-
-.swiper-container {
-	overflow: visible !important;
-	width: 100%;
-}
-
-.swiper-slide {
-	width: 3rem !important;
 }
 
 @font-face {

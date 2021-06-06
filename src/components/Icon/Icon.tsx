@@ -1,14 +1,12 @@
-import React, { HTMLAttributes, useEffect, useState } from "react";
-import { SwiperSlide } from "swiper/react";
+import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
-import useBreakpoint, { Breakpoints } from "../../functions/useBreakpoint";
+import { Breakpoints } from "../../functions/useBreakpoint";
 import classes from "./Icon.module.scss";
 import { IconNames, Icons } from "./IconContent";
 
 export type IconProps = {
 	name: IconNames;
 	focus?: boolean;
-	breakpoint: Breakpoints;
 } & HTMLAttributes<SVGElement>;
 
 export const Icon: React.FC<IconProps> = ({

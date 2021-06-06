@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import { SwiperSlide } from "swiper/react";
 import { Anchor } from "../components/Anchor";
 import { ContactInfo } from "../components/ContactInfo";
 import { Footer } from "../components/Footer";
@@ -11,7 +10,6 @@ import { IconList } from "../components/IconList";
 import { Paragraph } from "../components/Paragraph";
 import { Section } from "../components/Section";
 import { UnorderedList } from "../components/UnorderedList";
-import useBreakpoint from "../functions/useBreakpoint";
 import { ContactInformation, Projects, Skills, SocialMedias } from "../info";
 
 const App = () => {
@@ -68,10 +66,20 @@ const App = () => {
 					</UnorderedList>
 				</Section>
 				<Section title="Social Media">
-					<IconList type="link" icons={SocialMedias} />
+					<IconList>
+						{SocialMedias.sort((a, b) => a.name.localeCompare(b.name)).map(
+							({ href, name }) => (
+								<IconLink href={href} name={name} key={name} />
+							)
+						)}
+					</IconList>
 				</Section>
 				<Section title="Skills">
-					<IconList type="icon" icons={Skills} scroll />
+					<IconList scroll>
+						{Skills.sort((a, b) => a.localeCompare(b)).map((name) => (
+							<Icon tabIndex={0} name={name} key={name} />
+						))}
+					</IconList>
 				</Section>
 			</article>
 			<Footer />
