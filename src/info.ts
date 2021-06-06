@@ -6,7 +6,7 @@ type ProjectLink = {
 	name: string;
 } & AnchorProps;
 
-type IconLink = {
+export type IconLink = {
 	name: IconNames;
 } & AnchorProps;
 
@@ -74,5 +74,6 @@ export const Skills: IconNames[] = [
 	"graphql",
 	"mysql",
 	"wordpress",
-	"strapi"
+	"strapi",
+	"pwa"
 ];

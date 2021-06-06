@@ -1,5 +1,6 @@
 import React, { ImgHTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
+import NextImage from "next/image";
 
 type ImageProps = {
 	alt: string;

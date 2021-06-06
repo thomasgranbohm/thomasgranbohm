@@ -35,7 +35,20 @@ h3,
 h4,
 h5,
 h6 {
-	margin-block-start: 1em;
+	margin-bottom: 0.5rem;
+}
+
+section {
+	margin-bottom: 1rem;
+}
+
+.swiper-container {
+	overflow: visible !important;
+	width: 100%;
+}
+
+.swiper-slide {
+	width: 3rem !important;
 }
 
 @font-face {

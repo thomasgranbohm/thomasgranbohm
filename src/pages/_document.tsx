@@ -11,7 +11,6 @@ class CustomDocument extends Document {
 					<meta property="og:title" content="Thomas Granbohm" />
 					<meta property="og:url" content="https://thomas.granbohm.dev" />
 
-
 					<link rel="manifest" href="/manifest.json" />
 
 					<link rel="icon" type="image/png" href="/images/icon-x48.png" sizes="48x48" />

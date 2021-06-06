@@ -13,7 +13,8 @@
 		"plop": "^2.7.4",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
-		"sass": "^1.32.7"
+		"sass": "^1.32.7",
+		"swiper": "^6.7.0"
 	},
 	"devDependencies": {
 		"@types/node": "^14.14.25",

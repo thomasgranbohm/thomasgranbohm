@@ -27,6 +27,8 @@
 	}
 
 	@media (min-width: #{$tablet-small}) {
+		text-decoration: none;
+
 		&.underline::after {
 			width: 0%;
 			margin-inline-start: 100%;
