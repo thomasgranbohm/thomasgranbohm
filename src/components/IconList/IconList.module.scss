@@ -19,11 +19,10 @@
 	.container {
 		gap: $gutter;
 	}
-  
+
 	&.scroll {
 		@media (max-width: #{$tablet-small}) {
 			overflow-x: hidden;
-
 			margin: 0 (-1 * $gutter);
 
 			.container {
@@ -37,6 +36,9 @@
 				flex-wrap: nowrap;
 
 				overflow: auto;
+
+				scroll-snap-type: x proximity;
+				scroll-padding: $gutter;
 			}
 		}
 	}
