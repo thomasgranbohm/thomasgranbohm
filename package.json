@@ -10,7 +10,7 @@
     "npm-run-all": "^4.1.5"
   },
   "scripts": {
-    "develop:backend": "yarn --cwd backend develop",
+    "develop:backend": "yarn --cwd backend dev",
     "develop:frontend": "yarn --cwd frontend dev",
     "develop": "dotenv -e .env -- npm-run-all -l -p develop:*"
   }

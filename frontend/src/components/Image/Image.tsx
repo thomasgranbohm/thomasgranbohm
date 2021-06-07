@@ -1,6 +1,7 @@
 import React, { ImgHTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
 import NextImage from "next/image";
+import { getStrapiMedia } from "../../utils/media";
 
 type ImageProps = {
 	alt: string;
@@ -10,7 +11,7 @@ export const Image = ({ alt, className, src, ...props }: ImageProps) => {
 	return (
 		<img
 			alt={alt}
-			src={src}
+			src={getStrapiMedia(src)}
 			height={128}
 			width={128}
 			className={concatClasses([className, className])}

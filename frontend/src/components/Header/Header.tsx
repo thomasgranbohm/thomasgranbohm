@@ -1,6 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
 import { getStrapiURL } from "../../utils/api";
+import { getStrapiMedia } from "../../utils/media";
 import { Heading } from "../Heading";
 import { Image } from "../Image";
 import classes from "./Header.module.scss";
@@ -40,9 +41,9 @@ export const Header = ({
 			<Image
 				alt={title}
 				className={classes["image"]}
-				src={getStrapiURL(url)}
+				src={url}
 				srcSet={Object.values(formats)
-					.map(({ url, width }) => `${getStrapiURL(url)} ${width}w`)
+					.map(({ url, width }) => `${getStrapiMedia(url)} ${width}w`)
 					.join(", ")}
 				sizes={`${Object.values(formats)
 					.sort((a, b) => a.width - b.width)
