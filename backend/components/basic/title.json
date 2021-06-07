@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_basic_titles",
+  "info": {
+    "name": "title",
+    "icon": "archway"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

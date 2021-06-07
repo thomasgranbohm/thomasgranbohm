@@ -1,23 +1,17 @@
 {
-	"name": "thomasgranbohm",
-	"version": "0.2.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"prod": "next export || (next build && next export)"
-	},
-	"dependencies": {
-		"next": "10.0.6",
-		"plop": "^2.7.4",
-		"react": "17.0.1",
-		"react-dom": "17.0.1",
-		"sass": "^1.32.7"
-	},
-	"devDependencies": {
-		"@types/node": "^14.14.25",
-		"@types/react": "^17.0.1",
-		"typescript": "^4.1.5"
-	}
+  "name": "thomasgranbohm",
+  "version": "0.3.0",
+  "repository": "git@github.com:thomasgranbohm/thomasgranbohm.git",
+  "author": "Thomas Granbohm <thomas.granbohm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "dotenv-cli": "^4.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "develop:backend": "yarn --cwd backend develop",
+    "develop:frontend": "yarn --cwd frontend dev",
+    "develop": "dotenv -e .env -- npm-run-all -l -p develop:*"
+  }
 }

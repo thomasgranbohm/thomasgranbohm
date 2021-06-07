@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_icon_sections",
+  "info": {
+    "name": "IconSection",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "icons": {
+      "collection": "icon"
+    },
+    "scroll": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

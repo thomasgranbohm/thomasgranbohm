@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_text_sections",
+  "info": {
+    "name": "TextSection",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

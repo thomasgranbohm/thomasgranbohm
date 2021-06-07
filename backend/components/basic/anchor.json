@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_basic_anchors",
+  "info": {
+    "name": "Anchor",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    }
+  }
+}

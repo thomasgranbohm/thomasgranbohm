@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "icons",
+  "info": {
+    "name": "icon",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "viewbox": {
+      "type": "string"
+    },
+    "fill": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  }
+}

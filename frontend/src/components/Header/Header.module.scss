@@ -1,0 +1,23 @@
+@import "includes";
+
+.header {
+	display: grid;
+	gap: 0 0.5em;
+	grid-template-columns: 1fr auto;
+	grid-template-areas: "title image";
+}
+
+.image {
+	grid-area: image;
+
+	align-self: center;
+	object-fit: cover;
+}
+
+.title {
+	grid-area: title;
+
+	margin: 0;
+
+	align-self: center;
+}
