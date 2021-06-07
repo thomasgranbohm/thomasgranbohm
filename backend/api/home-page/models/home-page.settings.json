@@ -18,7 +18,7 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.text-sections",
+        "sections.text-section",
         "sections.icon-section",
         "sections.contact-info"
       ]

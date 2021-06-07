@@ -9,14 +9,13 @@ export type IconLinkProps = AnchorProps &
 export const IconLink = ({
 	className,
 	href,
-	name,
 	...props
 }: IconLinkProps) => {
 	const focusState = useState<boolean>(false);
 
 	return (
 		<Anchor href={href} focusState={focusState} noUnderline>
-			<Icon name={name} focus={focusState[0]} {...props} />
+			<Icon focus={focusState[0]} {...props} />
 		</Anchor>
 	);
 };
