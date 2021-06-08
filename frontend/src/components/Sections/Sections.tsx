@@ -22,29 +22,21 @@ const IconSection = ({ data: { title, scroll, icons } }) => {
 	return (
 		<Section title={title}>
 			<IconList scroll={scroll}>
-				{icons.map(({ content, title, fill, viewbox, link }) => {
-					if (link) {
-						return (
-							<IconLink
-								key={title}
-								title={title}
-								fillColor={fill}
-								viewBox={viewbox}
-								content={content}
-								href={link}
-							/>
-						);
-					}
-					return (
-						<Icon
-							key={title}
-							title={title}
-							fillColor={fill}
-							viewBox={viewbox}
-							content={content}
-						/>
-					);
-				})}
+				{icons
+					.sort((a, b) => (a.title as string).localeCompare(b.title as string))
+					.map(({ content, title, fill, viewbox, link }) => {
+						const props = {
+							key: title,
+							title: title,
+							fillColor: fill,
+							viewBox: viewbox,
+							content: content,
+						};
+						if (link) {
+							return <IconLink {...props} href={link} />;
+						}
+						return <Icon {...props} />;
+					})}
 			</IconList>
 		</Section>
 	);
