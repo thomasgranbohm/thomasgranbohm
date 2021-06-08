@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "viewbox": {
       "type": "string"
@@ -22,6 +23,10 @@
       "type": "string"
     },
     "content": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
       "type": "string"
     }
   }

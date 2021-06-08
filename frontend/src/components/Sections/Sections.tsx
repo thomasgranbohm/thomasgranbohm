@@ -4,6 +4,7 @@ import { fetchAPI, getStrapiURL } from "../../utils/api";
 import { Anchor } from "../Anchor";
 import { ContactInfo } from "../ContactInfo";
 import { Icon } from "../Icon";
+import { IconLink } from "../IconLink";
 import { IconList } from "../IconList";
 import { Paragraph } from "../Paragraph";
 import { Section } from "../Section/Section";
@@ -21,7 +22,19 @@ const IconSection = ({ data: { title, scroll, icons } }) => {
 	return (
 		<Section title={title}>
 			<IconList scroll={scroll}>
-				{icons.map(({ content, title, fill, viewbox }) => {
+				{icons.map(({ content, title, fill, viewbox, link }) => {
+					if (link) {
+						return (
+							<IconLink
+								key={title}
+								title={title}
+								fillColor={fill}
+								viewBox={viewbox}
+								content={content}
+								href={link}
+							/>
+						);
+					}
 					return (
 						<Icon
 							key={title}
