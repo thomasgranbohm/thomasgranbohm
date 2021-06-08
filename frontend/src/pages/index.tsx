@@ -54,6 +54,7 @@ export async function getStaticProps(context) {
 			sections,
 			title,
 		},
+		revalidate: 60,
 	};
 }
 

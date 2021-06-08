@@ -23,7 +23,7 @@
       "type": "string"
     },
     "content": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "link": {
