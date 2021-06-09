@@ -31,7 +31,7 @@ export const Anchor: React.FC<AnchorProps> = ({
 			target="_blank"
 			{...props}
 		>
-			<span className={classes["link-text"]}>{children}</span>
+			{children}
 		</a>
 	);
 };
