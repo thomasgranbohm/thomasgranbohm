@@ -1,4 +1,4 @@
-import React, { AnchorHTMLAttributes, useState } from "react";
+import React, { AnchorHTMLAttributes, useEffect, useState } from "react";
 import concatClasses from "../../functions/concatClasses";
 import classes from "./Anchor.module.scss";
 
@@ -11,7 +11,7 @@ export type AnchorProps = {
 export const Anchor: React.FC<AnchorProps> = ({
 	children,
 	className,
-	focusState: [focus, setFocus] = useState<boolean>(false),
+	focusState: [focus, setFocus] = [false, () => {}],
 	href,
 	noUnderline,
 	...props

@@ -15,15 +15,5 @@
 	&:hover:not([fill]) {
 		fill: $text;
 	}
-
-	@media (min-width: #{$tablet-small}) {
-		&:not(:hover, :focus, .focus) {
-			fill: $secondary;
-		}
-	}
 }
 
-:export {
-	text: $text;
-	background: $background;
-}

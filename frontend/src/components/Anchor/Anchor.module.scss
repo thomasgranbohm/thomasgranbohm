@@ -17,26 +17,27 @@
 	}
 
 	&.underline {
-		text-decoration: none;
 		display: inline;
 
-		background-image: linear-gradient($link, $link);
-		background-repeat: no-repeat;
-
-		background-position-y: 90%;
-		background-position-x: 0%;
-		background-size: 100% 2px;
+		text-decoration: underline;
 
 		@media (min-width: #{$tablet-small}) {
-			background-position-x: 100%;
-			background-size: 0% 2px;
+			text-decoration: none;
+			background-image: linear-gradient($link, $link),
+				linear-gradient($background, $background);
+			background-repeat: no-repeat;
+
+			background-position-y: 90%, 0;
+			background-position-x: 100%, 0;
+			background-size: 0% 2px, 100% 100%;
 			transition: background-size 0.1s;
 
 			transition-timing-function: linear;
 
-			&:hover {
-				background-position-x: 0%;
-				background-size: 100% 2px;
+			&:hover,
+			&:focus {
+				background-position-x: 0%, 0;
+				background-size: 100% 2px, 100% 100%;
 				transition: background-size 0.1s;
 			}
 		}

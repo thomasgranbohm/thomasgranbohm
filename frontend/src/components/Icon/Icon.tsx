@@ -30,6 +30,7 @@ export const Icon: React.FC<IconProps> = ({
 			)}
 			fill={fillColor && `#${fillColor}`}
 			viewBox={viewBox || "0 0 24 24"}
+			tabIndex={!focus ? 0 : undefined}
 			height={24}
 			width={24}
 			dangerouslySetInnerHTML={{ __html: `<title>${title}</title>${content}` }}
