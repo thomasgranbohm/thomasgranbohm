@@ -1,0 +1,30 @@
+version: "3"
+services:
+  backend:
+    command: bash -c 'npm run build && npm run start'
+    env_file:
+      - ./.env
+    expose:
+      - "1337"
+    image: node:14
+    ports:
+      - "1337:1337"
+    user: node
+    volumes:
+      - ./backend:/home/node/app
+    working_dir: /home/node/app
+  frontend:
+    depends_on:
+      - backend
+    command: bash -c 'npm run build && npm run start'
+    env_file:
+      - ./.env
+    expose:
+      - "5000"
+    image: node:14
+    ports:
+      - "5000:5000"
+    user: node
+    volumes:
+      - ./frontend:/home/node/app
+    working_dir: /home/node/app
