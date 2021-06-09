@@ -1,4 +1,5 @@
 import React, { HTMLAttributes } from "react";
+import ReactMarkdown from "react-markdown";
 import concatClasses from "../../functions/concatClasses";
 import classes from "./Footer.module.scss";
 

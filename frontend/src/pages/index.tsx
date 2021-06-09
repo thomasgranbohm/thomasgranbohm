@@ -3,9 +3,9 @@ import React, { useEffect } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import Sections from "../components/Sections/Sections";
-import { getGlobalData, getHomePage } from "../utils/api";
+import { getHomePage } from "../utils/api";
 
-const App = ({ sections, title, headshot, global, ...rest }) => {
+const App = ({ sections, title, headshot, global, footer }) => {
 	useEffect(() => {
 		if (
 			"serviceWorker" in navigator &&
@@ -31,25 +31,23 @@ const App = ({ sections, title, headshot, global, ...rest }) => {
 			<article>
 				<Sections sections={sections} />
 			</article>
-			<Footer text={global["footer"]} />
+			<Footer text={footer} />
 		</main>
 	);
 };
 
-export async function getStaticProps(context) {
-	const global = await getGlobalData();
-
+export async function getStaticProps() {
 	const pageData = await getHomePage();
 
 	if (pageData == null) {
 		return { props: {} };
 	}
 
-	const { sections, title, headshot } = pageData;
+	const { sections, title, headshot, footer } = pageData;
 
 	return {
 		props: {
-			global,
+			footer,
 			headshot,
 			sections,
 			title,
