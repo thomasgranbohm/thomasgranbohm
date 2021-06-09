@@ -16,30 +16,29 @@
 		background-color: $text;
 	}
 
-	&.underline::after {
-		display: block;
-		content: "";
-
-		background-color: $link;
-
-		height: 2px;
-		width: 100%;
-	}
-
-	@media (min-width: #{$tablet-small}) {
+	&.underline {
 		text-decoration: none;
+		display: inline;
 
-		&.underline::after {
-			width: 0%;
-			margin-inline-start: 100%;
-			transition: width 0.2s, margin-inline-start 0.2s;
-		}
+		background-image: linear-gradient($link, $link);
+		background-repeat: no-repeat;
 
-		&.underline:hover::after,
-		&.underline.focus::after {
-			width: 100%;
-			margin-inline-start: 0%;
-			transition: width 0.2s, margin-inline-start 0s;
+		background-position-y: 90%;
+		background-position-x: 0%;
+		background-size: 100% 2px;
+
+		@media (min-width: #{$tablet-small}) {
+			background-position-x: 100%;
+			background-size: 0% 2px;
+			transition: background-size 0.1s;
+
+			transition-timing-function: linear;
+
+			&:hover {
+				background-position-x: 0%;
+				background-size: 100% 2px;
+				transition: background-size 0.1s;
+			}
 		}
 	}
 }
