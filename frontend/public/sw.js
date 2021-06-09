@@ -24,18 +24,7 @@ self.addEventListener("fetch", (e) => {
 			.then((resp) => {
 				if (resp) return resp;
 
-				return fetch(e.request)
-					.then((resp) => {
-						if (!resp || resp.status !== 200 || resp.type !== "basic")
-							return resp;
-
-						const respToCache = resp.clone();
-
-						caches.open(CACHE_NAME)
-							.then((cache) => cache.put(e.request, respToCache))
-
-						return resp;
-					})
+				return fetch(e.request);
 			})
 	)
 })
