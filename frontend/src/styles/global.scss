@@ -12,6 +12,8 @@ body {
 	background-color: $background;
 
 	font-family: Heebo, sans-serif;
+
+	word-break: break-word;
 }
 
 ::selection {
@@ -21,7 +23,7 @@ body {
 
 main {
 	width: 100%;
-	max-width: 768px;
+	max-width: 960px;
 
 	margin: $gutter auto;
 	padding: 0 $gutter;

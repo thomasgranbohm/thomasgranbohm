@@ -8,8 +8,6 @@
 
 		margin: unset;
 		padding: unset;
-
-		overflow: hidden;
 	}
 }
 
@@ -43,8 +41,15 @@
 		}
 	}
 
-	&:not(.scroll) {
-		@include container-grid();
+	@media (max-width: #{$mobile}) {
+		&:not(.scroll) {
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				flex-wrap: wrap;
+			}
+		}
 	}
 
 	@media (min-width: #{$tablet-small}) {
