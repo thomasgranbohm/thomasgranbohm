@@ -28,7 +28,7 @@ export const Icon: React.FC<IconProps> = ({
 				[className, className],
 				[classes["focus"], focus]
 			)}
-			fill={fillColor && `#${fillColor}`}
+			fill={fillColor}
 			viewBox={viewBox || "0 0 24 24"}
 			tabIndex={!focus ? 0 : undefined}
 			height={24}
