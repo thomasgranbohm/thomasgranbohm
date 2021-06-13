@@ -1,77 +1,55 @@
-'use strict';
+"use strict";
 
-/**
- * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
- * to customize this model
- */
+const si = require("simple-icons");
 
-const HEX_COLOR_REGEX = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+const convert = require("color-convert");
 
-const hexToHSL = (hex) => {
-  let result = HEX_COLOR_REGEX.exec(hex);
-  if (result == null) return hex;
+const icons = new Map();
 
-  let r = parseInt(result[1], 16);
-  let g = parseInt(result[2], 16);
-  let b = parseInt(result[3], 16);
-
-  (r /= 255), (g /= 255), (b /= 255);
-  let max = Math.max(r, g, b),
-    min = Math.min(r, g, b);
-  let h,
-    s,
-    l = (max + min) / 2;
-
-  if (max == min) {
-    h = s = 0;
-  } else {
-    let d = max - min;
-    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-    switch (max) {
-      case r:
-        h = (g - b) / d + (g < b ? 6 : 0);
-        break;
-      case g:
-        h = (b - r) / d + 2;
-        break;
-      case b:
-        h = (r - g) / d + 4;
-        break;
-    }
-    h /= 6;
-  }
-
-  s = Math.round(s * 100);
-  l = Math.round(l * 100);
-  h = Math.round(h * 360);
-  return [h, s, l];
-};
+for (const icon in si) {
+  const i = si.get(icon);
+  icons.set(i.title.toLowerCase(), i);
+}
 
 const parse = (data) => {
-  if (data.fill) {
-    const { fill } = data;
-    if (HEX_COLOR_REGEX.exec(fill)) {
-      let [h, s, l] = hexToHSL(fill);
-      if (l < 35) {
-        l = 35;
-        data.fill = `hsl(${h}, ${s}%, ${l}%)`;
-      } else if (l > 65) {
-      	l = 65;
-      	data.fill = `hsl(${h}, ${s}%, ${l}%)`;
-      } else if (!fill.startsWith("#")) {
-        data.fill = `#${fill}`;
+  const icon = icons.get(data.title.toLowerCase());
+
+  if (!icon) throw strapi.errors.badRequest("Could not find: " + data.title);
+  const { hex, path, title } = icon;
+
+  data.title = title;
+  data.content = path;
+
+  if (hex) {
+    const hsv = convert.hex.hsv(hex);
+    if (hsv[2] <= 20) {
+      data.fill = null;
+    } else {
+      const hsl = convert.hex.hsl(hex);
+      if (hsl[2] < 35) {
+        hsl[2] = 35;
+      } else if (hsl[2] > 65) {
+        hsl[2] = 65;
       }
+      data.fill = "#" + convert.hsl.hex(hsl);
     }
   }
+
+  if (
+    !data.viewbox ||
+    !/([0-9.]+) ([0-9.]+) ([0-9.]+) ([0-9.]+)/i.exec(data.viewbox)
+  )
+    data.viewbox = "0 0 24 24";
+
   return data;
 };
 
 module.exports = {
   lifecycles: {
-    beforeCreate(data) {
+    beforeCreate: (data) => {
       data = parse(data);
     },
-    beforeUpdate(params, data) {
+    beforeUpdate: (params, data) => {
       data = parse(data);
     },
   },

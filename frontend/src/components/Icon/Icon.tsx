@@ -33,8 +33,10 @@ export const Icon: React.FC<IconProps> = ({
 			tabIndex={!focus ? 0 : undefined}
 			height={24}
 			width={24}
-			dangerouslySetInnerHTML={{ __html: `<title>${title}</title>${content}` }}
 			{...props}
-		></svg>
+		>
+			<title>{title}</title>
+			<path d={content} />
+		</svg>
 	);
 };

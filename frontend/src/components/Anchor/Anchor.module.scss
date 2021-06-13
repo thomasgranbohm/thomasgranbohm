@@ -32,7 +32,7 @@
 			background-size: 0% 2px, 100% 100%;
 			transition: background-size 0.2s;
 
-			transition-timing-function: linear;
+			transition-timing-function: ease;
 
 			&:hover,
 			&:focus {
