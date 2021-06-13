@@ -52,9 +52,12 @@ const parse = (data) => {
     const { fill } = data;
     if (HEX_COLOR_REGEX.exec(fill)) {
       let [h, s, l] = hexToHSL(fill);
-      if (l < 40) {
-        l = 50;
+      if (l < 35) {
+        l = 35;
         data.fill = `hsl(${h}, ${s}%, ${l}%)`;
+      } else if (l > 65) {
+      	l = 65;
+      	data.fill = `hsl(${h}, ${s}%, ${l}%)`;
       } else if (!fill.startsWith("#")) {
         data.fill = `#${fill}`;
       }
