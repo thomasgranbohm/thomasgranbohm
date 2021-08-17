@@ -28,6 +28,14 @@
     },
     "link": {
       "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Skill",
+        "SocialMedia"
+      ],
+      "required": true
     }
   }
 }

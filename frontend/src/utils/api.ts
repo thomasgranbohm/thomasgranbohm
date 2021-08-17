@@ -31,6 +31,19 @@ export async function fetchAPI(path, options = {}) {
 export async function getHomePage() {
 	const homepage = await fetchAPI(`/home-page`);
 
+	await Promise.all([
+		...homepage.sections
+			.filter(
+				(section) => section.__component === "sections.icon-section"
+			)
+			.map(
+				async (section) =>
+					(section.icons = await fetchAPI(
+						`/icons?type=${section.type}`
+					))
+			),
+	]);
+
 	return homepage;
 }
 

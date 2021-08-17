@@ -11,12 +11,17 @@
       "type": "string",
       "required": true
     },
-    "icons": {
-      "collection": "icon"
-    },
     "scroll": {
       "type": "boolean",
       "default": false,
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Skill",
+        "SocialMedia"
+      ],
       "required": true
     }
   }
