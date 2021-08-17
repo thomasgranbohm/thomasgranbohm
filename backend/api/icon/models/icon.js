@@ -12,6 +12,7 @@ for (const icon in si) {
 }
 
 const parse = (data) => {
+  if (!data || !data.title) return;
   const icon = icons.get(data.title.toLowerCase());
 
   if (!icon) throw strapi.errors.badRequest("Could not find: " + data.title);
