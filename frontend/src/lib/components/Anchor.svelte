@@ -3,11 +3,10 @@
 
 	export let href = '';
 	export let noUnderline = false;
-	export let className = '';
 </script>
 
 <a
-	class={concatClasses('anchor', [className, className], ['underline', !noUnderline])}
+	class={concatClasses('anchor', ['underline', !noUnderline])}
 	{href}
 	rel="noopener noreferrer"
 	target="_blank"

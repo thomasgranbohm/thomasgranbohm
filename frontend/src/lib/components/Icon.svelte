@@ -6,11 +6,10 @@
 	export let focus: boolean = false;
 	export let title: string;
 	export let viewBox: string = undefined;
-	export let className = '';
 </script>
 
 <svg
-	class={concatClasses('icon', [className, className], ['focus', focus])}
+	class={concatClasses('icon', ['focus', focus])}
 	fill={fillColor}
 	viewBox={viewBox || '0 0 24 24'}
 	tabIndex={!focus ? 0 : undefined}

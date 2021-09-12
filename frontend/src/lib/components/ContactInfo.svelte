@@ -3,7 +3,6 @@
 	import Anchor from './Anchor.svelte';
 	import ChildWithPrefix from './ChildWithPrefix.svelte';
 
-	export let className = '';
 	export let contacts: [
 		{
 			text: string;
@@ -12,7 +11,7 @@
 	];
 </script>
 
-<address class={concatClasses([['contact-info'], true], [className, className])}>
+<address class={concatClasses([['contact-info'], true])}>
 	{#each contacts as contact}
 		<ChildWithPrefix prefix={contact.type}>
 			{#if contact.type === 'discord'}

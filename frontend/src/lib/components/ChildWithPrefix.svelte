@@ -2,10 +2,9 @@
 	import concatClasses from '../functions/concatClasses';
 
 	export let prefix: 'discord' | 'email' | 'phone';
-	export let className = '';
 </script>
 
-<div class={concatClasses('child-with-prefix', [className, className], prefix)}>
+<div class={concatClasses('child-with-prefix', prefix)}>
 	<slot />
 </div>
 

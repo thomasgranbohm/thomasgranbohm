@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { getStrapiMedia } from '$lib/utils/media';
-
-	import concatClasses from '../functions/concatClasses';
 	import Image from './Image.svelte';
 
 	export let headshot: {
@@ -23,16 +21,15 @@
 		width: number;
 	};
 	export let title: string;
-	export let className = '';
 
 	let { formats, url, width: orgWidth } = headshot;
 </script>
 
-<header class={concatClasses('header', [className, className])}>
-	<!-- <Image
+<header class="header">
+	<img
 		alt={title}
-		className={'image'}
-		src={url}
+		class={'image'}
+		src={getStrapiMedia(url)}
 		srcSet={Object.values(formats)
 			.map(({ url, width }) => `${getStrapiMedia(url)} ${width}w`)
 			.join(', ')}
@@ -43,7 +40,7 @@
 				return `(max-width: ${nextWidth}px) ${width}px`;
 			})
 			.join(', ')}, ${orgWidth}px`}
-	/> -->
+	/>
 	<h1 class={'title'}>
 		{title}
 	</h1>

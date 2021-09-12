@@ -2,10 +2,9 @@
 	import concatClasses from '../functions/concatClasses';
 
 	export let scroll: boolean;
-	export let className = '';
 </script>
 
-<div class={concatClasses('icon-list', [className, className], ['scroll', scroll])} {...$$props}>
+<div class={concatClasses('icon-list', ['scroll', scroll])} {...$$props}>
 	<div class={'container'}><slot /></div>
 </div>
 
