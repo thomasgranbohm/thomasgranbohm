@@ -16,9 +16,11 @@ services:
   frontend:
     depends_on:
       - backend
-    command: bash -c 'npm run build && npm run start'
+    command: bash -c 'npm run build && node build/'
     env_file:
       - ./.env
+    environment:
+      - PORT=5000
     expose:
       - "5000"
     image: node:14

@@ -1,8 +1,8 @@
 export function getStrapiURL(path) {
 	return `${
 		(typeof window === 'undefined'
-			? import.meta.env.PRIVATE_STRAPI_API_URL
-			: import.meta.env.NEXT_PUBLIC_STRAPI_API_URL) || 'http://localhost:1337'
+			? import.meta.env.VITE_PRIVATE_STRAPI_API_URL
+			: import.meta.env.VITE_STRAPI_API_URL) || 'http://localhost:1337'
 	}${path}`;
 }
 
