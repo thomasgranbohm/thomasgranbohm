@@ -1,5 +1,8 @@
 <script lang="ts">
-	import concatClasses from "../functions/concatClasses";
+	import { getStrapiMedia } from '$lib/utils/media';
+
+	import concatClasses from '../functions/concatClasses';
+	import Image from './Image.svelte';
 
 	export let headshot: {
 		formats: {
@@ -20,40 +23,40 @@
 		width: number;
 	};
 	export let title: string;
-	export let className = "";
+	export let className = '';
 
-	let { formats, url, width } = headshot;
+	let { formats, url, width: orgWidth } = headshot;
 </script>
 
-<header class={concatClasses("header", [className, className])}>
-	<Image
+<header class={concatClasses('header', [className, className])}>
+	<!-- <Image
 		alt={title}
-		className={"image"}
+		className={'image'}
 		src={url}
 		srcSet={Object.values(formats)
 			.map(({ url, width }) => `${getStrapiMedia(url)} ${width}w`)
-			.join(", ")}
+			.join(', ')}
 		sizes={`${Object.values(formats)
 			.sort((a, b) => a.width - b.width)
 			.map(({ width }, i, arr) => {
 				const nextWidth = arr[i + 1]?.width || orgWidth;
 				return `(max-width: ${nextWidth}px) ${width}px`;
 			})
-			.join(", ")}, ${orgWidth}px`}
-	/>
-	<h1 class={"title"}>
+			.join(', ')}, ${orgWidth}px`}
+	/> -->
+	<h1 class={'title'}>
 		{title}
 	</h1>
 </header>
 
 <style lang="scss">
-	@import "../styles/includes";
+	@import '../../styles/includes';
 
 	.header {
 		display: grid;
 		gap: 0 0.5em;
 		grid-template-columns: 1fr auto;
-		grid-template-areas: "title image";
+		grid-template-areas: 'title image';
 
 		margin-bottom: 1rem;
 	}

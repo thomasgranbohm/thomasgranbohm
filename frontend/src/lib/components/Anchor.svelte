@@ -1,17 +1,13 @@
-<script lang="ts">
-	import concatClasses from "../functions/concatClasses";
+<script async lang="ts">
+	import concatClasses from '../functions/concatClasses';
 
-	export let href = "";
+	export let href = '';
 	export let noUnderline = false;
-	export let className = "";
+	export let className = '';
 </script>
 
 <a
-	class={concatClasses(
-		"anchor",
-		[className, className],
-		["underline", !noUnderline]
-	)}
+	class={concatClasses('anchor', [className, className], ['underline', !noUnderline])}
 	{href}
 	rel="noopener noreferrer"
 	target="_blank"
@@ -20,7 +16,7 @@
 </a>
 
 <style lang="scss">
-	@import "../styles/includes.scss";
+	@import '../../styles/includes.scss';
 
 	.anchor {
 		color: $link;

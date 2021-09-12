@@ -1,13 +1,25 @@
-<script lang="ts">
-	import Anchor from "../components/Anchor.svelte";
-	import ChildWithPrefix from "../components/ChildWithPrefix.svelte";
-	import Heading from "../components/Heading.svelte";
+<script context="module">
+	export async function load() {
+		const data = await getHomePage();
+		return {
+			props: data
+		};
+	}
 </script>
 
-<h1>Great success!</h1>
+<script lang="ts">
+	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Sections from '$lib/components/Sections.svelte';
+	import { getHomePage } from '$lib/utils/api';
 
-<p>weower</p>
+	export let footer, headshot, sections, title;
+</script>
 
-<Anchor href="https://yommail.tk">Wower</Anchor>
-<ChildWithPrefix prefix="discord">Wower</ChildWithPrefix>
-<Heading type="h2">wower</Heading>
+<main>
+	<Header {headshot} {title} />
+	<article>
+		<Sections {sections} />
+	</article>
+	<Footer text={footer} />
+</main>

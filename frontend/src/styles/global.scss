@@ -1,4 +1,4 @@
-@import "includes";
+@import './includes.scss';
 
 * {
 	margin: 0;
@@ -46,6 +46,6 @@ section {
 
 @font-face {
 	font-family: Heebo;
-	src: url("/fonts/Heebo.ttf");
+	src: url('/fonts/Heebo.ttf');
 	font-display: swap;
 }

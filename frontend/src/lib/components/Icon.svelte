@@ -1,18 +1,18 @@
 <script lang="ts">
-	import concatClasses from "../functions/concatClasses";
+	import concatClasses from '../functions/concatClasses';
 
 	export let content: string;
 	export let fillColor: string = undefined;
 	export let focus: boolean = false;
 	export let title: string;
 	export let viewBox: string = undefined;
-	export let className = "";
+	export let className = '';
 </script>
 
 <svg
-	class={concatClasses("icon", [className, className], ["focus", focus])}
+	class={concatClasses('icon', [className, className], ['focus', focus])}
 	fill={fillColor}
-	viewBox={viewBox || "0 0 24 24"}
+	viewBox={viewBox || '0 0 24 24'}
 	tabIndex={!focus ? 0 : undefined}
 	height={24}
 	width={24}
@@ -23,7 +23,7 @@
 </svg>
 
 <style lang="scss">
-	@import "../styles/includes";
+	@import '../../styles/includes';
 
 	.icon {
 		height: 3rem;

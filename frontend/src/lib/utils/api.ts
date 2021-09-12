@@ -1,8 +1,8 @@
 export function getStrapiURL(path) {
 	return `${
-		(typeof window === "undefined"
-			? process.env.PRIVATE_STRAPI_API_URL
-			: process.env.NEXT_PUBLIC_STRAPI_API_URL) || "http://localhost:1337"
+		(typeof window === 'undefined'
+			? import.meta.env.PRIVATE_STRAPI_API_URL
+			: import.meta.env.NEXT_PUBLIC_STRAPI_API_URL) || 'http://localhost:1337'
 	}${path}`;
 }
 
@@ -10,12 +10,12 @@ export function getStrapiURL(path) {
 export async function fetchAPI(path, options = {}) {
 	const defaultOptions = {
 		headers: {
-			"Content-Type": "application/json",
-		},
+			'Content-Type': 'application/json'
+		}
 	};
 	const mergedOptions = {
 		...defaultOptions,
-		...options,
+		...options
 	};
 	const requestUrl = getStrapiURL(path);
 	const response = await fetch(requestUrl, mergedOptions);
@@ -33,15 +33,8 @@ export async function getHomePage() {
 
 	await Promise.all([
 		...homepage.sections
-			.filter(
-				(section) => section.__component === "sections.icon-section"
-			)
-			.map(
-				async (section) =>
-					(section.icons = await fetchAPI(
-						`/icons?type=${section.type}`
-					))
-			),
+			.filter((section) => section.__component === 'sections.icon-section')
+			.map(async (section) => (section.icons = await fetchAPI(`/icons?type=${section.type}`)))
 	]);
 
 	return homepage;

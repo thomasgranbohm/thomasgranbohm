@@ -3,7 +3,7 @@
 </ul>
 
 <style lang="scss">
-	@import "../styles/includes";
+	@import '../../styles/includes';
 
 	.unordered-list {
 		margin-inline-start: 1.5rem;

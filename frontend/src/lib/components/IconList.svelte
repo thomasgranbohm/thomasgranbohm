@@ -1,23 +1,16 @@
 <script lang="ts">
-	import concatClasses from "../functions/concatClasses";
+	import concatClasses from '../functions/concatClasses';
 
 	export let scroll: boolean;
-	export let className = "";
+	export let className = '';
 </script>
 
-<div
-	class={concatClasses(
-		"icon-list",
-		[className, className],
-		["scroll", scroll]
-	)}
-	{...$$props}
->
-	<div class={"container"}><slot /></div>
+<div class={concatClasses('icon-list', [className, className], ['scroll', scroll])} {...$$props}>
+	<div class={'container'}><slot /></div>
 </div>
 
 <style lang="scss">
-	@import "../styles/includes";
+	@import '../../styles/includes';
 
 	.icon-list {
 		margin-block-start: 0.5em;
