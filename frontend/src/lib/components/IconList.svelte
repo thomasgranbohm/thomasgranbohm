@@ -1,0 +1,72 @@
+<script lang="ts">
+	import concatClasses from '../functions/concatClasses';
+
+	export let scroll: boolean;
+</script>
+
+<div class={concatClasses('icon-list', ['scroll', scroll])} {...$$props}>
+	<div class={'container'}><slot /></div>
+</div>
+
+<style lang="scss">
+	@import '../../styles/includes';
+
+	.icon-list {
+		margin-block-start: 0.5em;
+
+		.container > * {
+			margin-inline-end: $gutter;
+		}
+
+		&.scroll {
+			@media (max-width: #{$tablet-small}) {
+				overflow-x: hidden;
+				margin: 0 (-1 * $gutter);
+
+				.container {
+					width: 100%;
+
+					padding: 0 $gutter $gutter;
+
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					flex-wrap: nowrap;
+
+					overflow: auto;
+
+					scroll-snap-type: x proximity;
+					scroll-padding: $gutter;
+				}
+			}
+		}
+
+		@media (max-width: #{$mobile}) {
+			&:not(.scroll) {
+				.container {
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+					flex-wrap: wrap;
+				}
+			}
+		}
+
+		@media (min-width: #{$tablet-small}) {
+			.container {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+				grid-auto-rows: 3rem;
+
+				gap: $gutter;
+
+				margin: unset;
+				padding: unset;
+
+				> * {
+					margin-inline-end: unset;
+				}
+			}
+		}
+	}
+</style>
