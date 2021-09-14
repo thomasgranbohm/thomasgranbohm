@@ -9,7 +9,8 @@ export type ContactInfoProps = {
 	contacts: [
 		{
 			text: string;
-			type: "discord" | "email" | "phone";
+			type?: "email" | "phone" | "discord";
+			link?: string;
 		}
 	];
 } & HTMLAttributes<HTMLElement>;
@@ -22,10 +23,15 @@ export const ContactInfo = ({ className, contacts }: ContactInfoProps) => {
 				[className, className]
 			)}
 		>
-			{contacts.map(({ text, type }) => (
+			{contacts.map(({ text, type, link }) => (
 				<ChildWithPrefix prefix={type} key={text + type}>
-					{type === "discord" && <p tabIndex={0}>{text}</p>}
-					{type === "email" && <Anchor href={`mailto:${text}`}>{text}</Anchor>}
+					{!type && !link && <p tabIndex={0}>{text}</p>}
+					{type === "discord" && link && (
+						<Anchor href={link}>{text}</Anchor>
+					)}
+					{type === "email" && (
+						<Anchor href={`mailto:${text}`}>{text}</Anchor>
+					)}
 					{type === "phone" && (
 						<Anchor href={`tel:${text.split(/[\s,-]+/g).join("")}`}>
 							{text}

@@ -17,11 +17,10 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "email",
-        "phone",
-        "discord"
-      ]
+      "enum": ["email", "phone", "discord"]
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
