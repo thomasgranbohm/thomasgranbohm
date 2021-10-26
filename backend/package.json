@@ -13,6 +13,7 @@
   "dependencies": {
     "color-convert": "^2.0.1",
     "knex": "0.21.18",
+    "pg": "^8.7.1",
     "simple-icons": "^5.2.0",
     "sqlite3": "^5.0.0",
     "strapi": "^3.6.8",
