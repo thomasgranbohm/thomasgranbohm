@@ -1,8 +1,6 @@
-import React, { HTMLAttributes, ReactNode } from "react";
+import React, { HTMLAttributes } from "react";
 import concatClasses from "../../functions/concatClasses";
-import { Breakpoints } from "../../functions/useBreakpoint";
 import classes from "./Icon.module.scss";
-import { IconNames, Icons } from "./IconContent";
 
 export type IconProps = {
 	content: string;
