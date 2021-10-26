@@ -1,0 +1,40 @@
+version: '3'
+services:
+  backend:
+    command: bash -c 'npm run build && npm run start'
+    env_file:
+      - ./config/backend.env
+    environment:
+      - NODE_ENV=production
+    expose:
+      - '1337'
+    image: node:14
+    user: node
+    volumes:
+      - ./backend:/home/node/app
+    working_dir: /home/node/app
+  frontend:
+    depends_on:
+      - backend
+    command: bash -c '/test-endpoint.sh backend 1337 && npm run build && npm run start'
+    env_file:
+      - ./config/frontend.env
+    expose:
+      - '3000'
+    image: node:14
+    user: node
+    volumes:
+      - ./frontend:/home/node/app
+      - ./scripts/test-endpoint.sh:/test-endpoint.sh
+    working_dir: /home/node/app
+  nginx:
+    command: bash -c '/test-endpoint.sh backend 1337 && echo "Starting NGiNX..." && nginx -g "daemon off;"'
+    depends_on:
+      - frontend
+    image: nginx
+    restart: unless-stopped
+    ports:
+      - ${NGINX_PORT:-9000}:80
+    volumes:
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ./scripts/test-endpoint.sh:/test-endpoint.sh
