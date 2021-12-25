@@ -1,6 +1,6 @@
-import React, { HTMLAttributes } from "react";
-import concatClasses from "../../functions/concatClasses";
-import { Heading, HeadingTypes } from "../../components/Heading";
+import React, { HTMLAttributes } from 'react';
+import concatClasses from '../../functions/concatClasses';
+import { Heading, HeadingTypes } from '../../components/Heading';
 
 type SectionProps = {
 	title: string;
@@ -11,12 +11,14 @@ export const Section: React.FC<SectionProps> = ({
 	className,
 	children,
 	title,
-	type = "h2",
+	type = 'h2',
 	...props
 }) => {
 	return (
 		<section className={concatClasses([className, className])} {...props}>
-			<Heading type={type}>{title}</Heading>
+			<Heading permalink type={type}>
+				{title}
+			</Heading>
 			{children}
 		</section>
 	);

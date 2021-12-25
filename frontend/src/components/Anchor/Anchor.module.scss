@@ -1,7 +1,8 @@
-@import "includes";
+@import 'includes';
 
 .anchor {
-	color: $link;
+	--color: #{$link};
+	color: var(--color);
 	font-weight: 600;
 	font-style: normal;
 
@@ -12,7 +13,7 @@
 	display: inline-block;
 
 	&::selection {
-		color: $link;
+		color: var(--color);
 		background-color: $text;
 	}
 
@@ -23,7 +24,7 @@
 
 		@media (min-width: #{$tablet-small}) {
 			text-decoration: none;
-			background-image: linear-gradient($link, $link),
+			background-image: linear-gradient(var(--color), var(--color)),
 				linear-gradient($background, $background);
 			background-repeat: no-repeat;
 
@@ -40,5 +41,10 @@
 				background-size: 100% 2px, 100% 100%;
 			}
 		}
+	}
+
+	&.permalink {
+		--color: #{$text};
+		text-decoration: none;
 	}
 }
