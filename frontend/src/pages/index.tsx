@@ -27,7 +27,7 @@ const App = ({ sections, title, headshot, global, footer }) => {
 			<Head>
 				<title>Thomas Granbohm</title>
 			</Head>
-			<Header headshot={headshot} title={title} />
+			<Header title={title} />
 			<article>
 				<Sections sections={sections} />
 			</article>
@@ -43,12 +43,11 @@ export async function getStaticProps() {
 		return { props: {} };
 	}
 
-	const { sections, title, headshot, footer } = pageData;
+	const { sections, title, footer } = pageData;
 
 	return {
 		props: {
 			footer,
-			headshot,
 			sections,
 			title,
 		},

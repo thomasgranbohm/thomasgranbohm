@@ -1,6 +1,6 @@
-import React, { AnchorHTMLAttributes, useEffect, useState } from 'react';
-import concatClasses from '../../functions/concatClasses';
-import classes from './Anchor.module.scss';
+import React, { AnchorHTMLAttributes } from "react";
+import concatClasses from "../../functions/concatClasses";
+import classes from "./Anchor.module.scss";
 
 export type AnchorProps = {
 	focusState?: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
@@ -21,11 +21,11 @@ export const Anchor: React.FC<AnchorProps> = ({
 	return (
 		<a
 			className={concatClasses(
-				classes['anchor'],
+				classes["anchor"],
 				[className, className],
-				[classes['underline'], !noUnderline],
-				[classes['focus'], focus],
-				[classes['permalink'], permalink]
+				[classes["underline"], !noUnderline],
+				[classes["focus"], focus],
+				[classes["permalink"], permalink]
 			)}
 			href={href}
 			onFocus={() => setFocus(true)}
