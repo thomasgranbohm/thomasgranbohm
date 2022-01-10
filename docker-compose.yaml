@@ -19,6 +19,8 @@ services:
     command: bash -c 'npm run dev'
     env_file:
       - ./config/frontend.env
+    environment:
+      NEXT_PUBLIC_BUILD_ID: ${COMMIT}
     expose:
       - '3000'
     image: node:14

@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 import Sections from "../components/Sections/Sections";
 import { getHomePage } from "../utils/api";
 
-const App = ({ sections, title, headshot, global, footer }) => {
+const App = ({ sections, title, footer }) => {
 	useEffect(() => {
 		if (
 			"serviceWorker" in navigator &&
