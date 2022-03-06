@@ -21,16 +21,9 @@ class CustomDocument extends Document {
 					<meta name="theme-color" content="#141414" />
 
 					<meta name="msapplication-config" content="/browserconfig.xml" />
-					<link
-						crossOrigin=""
-						rel="preload"
-						href="/fonts/Heebo.ttf"
-						as="font"
-						type="font/ttf"
-					/>
 
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
-					<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 					<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700&display=swap" rel="stylesheet" />
 				</Head>
 				<body>
