@@ -1,6 +1,5 @@
 const CACHE_NAME = "thomasgranbohm-v1";
 const toCache = [
-	"/fonts/Heebo.ttf",
 	"/images/icon-x48.png",
 	"/images/icon-x96.png",
 	"/images/icon-x192.png",
