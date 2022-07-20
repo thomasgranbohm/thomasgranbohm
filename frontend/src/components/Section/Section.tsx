@@ -16,9 +16,7 @@ export const Section: React.FC<SectionProps> = ({
 }) => {
 	return (
 		<section className={concatClasses([className, className])} {...props}>
-			<Heading permalink type={type}>
-				{title}
-			</Heading>
+			<Heading type={type}>{title}</Heading>
 			{children}
 		</section>
 	);
